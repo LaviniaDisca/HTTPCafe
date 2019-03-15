@@ -144,12 +144,9 @@ ul li:hover ul li {
 }
 
 body {
-    height: 100vh;
-    width: 100%;
-    background-image: url('resources/first-section.gif');
+    background-image: url('resources/background.gif');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
+    background-size: 100% 100%;
 }
 
 @font-face {
