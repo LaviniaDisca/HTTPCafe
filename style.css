@@ -135,13 +135,19 @@ ul li:hover ul li {
     display: block;
 }
 
-body {
-    width: 100%;
+.first-image {
     height: 100vh;
+    width: 100%;
     background-image: url('resources/first-section.gif');
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+    background-position: top;
+}
+.recomand{
+    background-image: url('resources/recom.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom;
 }
 
 #first-section {
