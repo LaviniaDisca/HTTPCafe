@@ -104,6 +104,10 @@ header {
     font-family: Arial;
     color: white;
 }
+nav{
+    z-index: 9999;
+    position: relative;
+}
 
 ul li {
     float: left;
@@ -159,6 +163,8 @@ section{
     display: flex;
     justify-content: space-around;
     color: wheat;
+    position: relative;
+    z-index: 1000;
 }
 article{
     margin: 5em;
