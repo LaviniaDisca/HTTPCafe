@@ -101,48 +101,41 @@ input, select {
 }
 
 header {
-    /* background-color: rgb(133, 114, 114); */
+    font-family: Arial;
+    color: white;
+}
+
+ul li {
+    float: left;
+    height: 2em;
+    width: calc(25% - 2px);
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 2em;
+    text-align: center;
+    font-size: calc(7vw / 4);
+    margin-right: 2px;
+}
+
+ul li a {
+    color: white;
+    display: block;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+ul li ul li {
+    display: none;
     width: 100%;
-    height: 50px;
-    padding-top: 20px;
-    border-bottom: 50px;
-    border-bottom-color: black;
 }
 
-header nav {
-    display: flex;
-    flex-wrap: wrap;
-}
-/* flex nav */
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    /* align-items: center; */
-    justify-content: space-between;
+ul li:hover ul li {
+    display: block;
 }
 
-.logo {
-    margin-right: auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    color: rgb(252, 246, 246);
-    padding-left: 20px;
-    padding-right: 10px;
-}
-
-.nav-option{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    color: rgb(245, 239, 239);
-}
-
-.nav-option:last-child{
-    padding-right: 20px;
-}
-
-.index-1 {
+body {
     width: 100%;
     height: 100vh;
     background-image: url('resources/first-section.gif');
@@ -151,25 +144,30 @@ header nav ul {
     background-size: cover;
 }
 
+#first-section {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
 #first-section h2 {
+    grid-area: 2/1/span 2/span 1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 60px;
+    font-size: calc(10vw / 4);
     font-weight: 900;
     color: rgb(221, 205, 195);
     display: block;
-    line-height: 70px;
-    text-align: center;
     font-weight: 900;
     text-shadow: 4px 4px 10px #111;
 }
 
 #first-section h1 {
+    grid-area: 3/1/span 3/span 1;
     font-family: Cormorant Garamond;
-    font-size: 28px;
+    font-size: calc(8vw / 4);
     color: white;
-    display: block;
-    line-height: 40px;
-    text-align: center;
     font-weight: 200;
     font-style: italic;
     text-shadow: 2px 2px 8px #111;
