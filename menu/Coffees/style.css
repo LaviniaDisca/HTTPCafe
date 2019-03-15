@@ -143,7 +143,7 @@ ul li:hover ul li {
     display: block;
 }
 
-.first-image {
+body {
     height: 100vh;
     width: 100%;
     background-image: url('resources/first-section.gif');
@@ -154,14 +154,7 @@ ul li:hover ul li {
 
 @font-face {
     font-family: chalk;
-    src: url("VTCAllSkratchedUpOne.ttf");
-}
-
-.recomand {
-    background-image: url('resources/board.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: bottom;
+    src: url("../../VTCAllSkratchedUpOne.ttf");
 }
 
 #first-section {
@@ -174,12 +167,10 @@ ul li:hover ul li {
 
 #first-section h2 {
     grid-area: 2/1/span 2/span 1;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: chalk;
     font-size: calc(10vw / 4);
-    font-weight: 900;
-    color: rgb(221, 205, 195);
+    color: white;
     display: block;
-    text-shadow: 4px 4px 10px #111;
 }
 
 #first-section h1 {
