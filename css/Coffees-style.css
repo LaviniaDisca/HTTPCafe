@@ -1,0 +1,243 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/*My code starts here 
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+* {
+    text-decoration: none;
+}
+
+header {
+    font-family: Arial;
+    color: white;
+}
+
+nav {
+    z-index: 9999;
+    position: relative;
+}
+
+ul li {
+    float: left;
+    height: 2em;
+    width: calc(20% - 2px);
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 2em;
+    text-align: center;
+    font-size: calc(7vw / 4);
+    margin-right: 2px;
+}
+
+ul li a {
+    color: white;
+    display: block;
+    user-select: none;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/*placeholder*/
+
+.logo:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+ul li ul li {
+    display: none;
+    width: 100%;
+}
+
+ul li:hover ul li {
+    display: block;
+}
+
+body {
+    background-image: url('../images/skulls.png');
+    background-repeat: repeat;
+}
+
+/* Should add a background like the nav(ul li) and style the shit out of it */
+
+.title {
+    font-size: calc(14vw / 4);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    height: 2em;
+    line-height: 3em;
+    /*Font to be changed*/
+    font-family: Arial;
+}
+
+.catalog {
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: wheat;
+    position: relative;
+    z-index: 1000;
+    font-size: calc(7vw / 4);
+}
+
+/*Maybe we should add a button or something IDK */
+
+.product {
+    padding: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    /*Font to be changed*/
+    font-family: Arial;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.product:hover {
+    transform: scale(calc(1.1));
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.product .price {
+    color: green;
+    padding: 2px;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+}
+
+.product h1 {
+    padding: 2px;
+}
+
+.product .button {
+    padding: 2px;
+}
+
+.button {
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    margin-top:10px;
+    cursor: pointer;
+    background-color: green;
+    color: black;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.button .button-text{
+    padding:4px;
+}
+
+.button:hover {
+    background-color: green;
+}
+
+.button:hover .button-text{
+    color: white;
+}

@@ -1,0 +1,298 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/*My code starts here 
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+
+* {
+    text-decoration: none;
+}
+
+header {
+    font-family: Arial;
+    color: white;
+}
+
+ul li {
+    float: left;
+    height: 2em;
+    width: calc(20% - 2px);
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 2em;
+    text-align: center;
+    margin-right: 2px;
+}
+
+ul li a {
+    color: white;
+    display: block;
+    user-select: none;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/*placeholder*/
+
+.logo:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+ul li ul li {
+    display: none;
+    width: 100%;
+}
+
+ul li:hover ul li {
+    display: block;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../images/home-background.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    font-size: calc(7vw / 4);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2vw;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2vw;
+}
+
+section h2 {
+    grid-area: 2/1/span 2/span 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    color: rgb(221, 205, 195);
+    display: block;
+    text-shadow: 4px 4px 10px #111;
+}
+
+section h1 {
+    grid-area: 3/1/span 3/span 1;
+    font-family: Cormorant Garamond;
+    color: white;
+    font-weight: 200;
+    font-style: italic;
+    text-shadow: 2px 2px 8px #111;
+}
+
+section h3 {
+    grid-area: 3/6/span 1/span 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0,0,0,0);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.arrow {
+    display: table;
+    width: 100%;
+    height:100%;
+}
+
+.arrow p {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color:white;
+}
+
+.overlay {
+    position: absolute;
+    top: calc(7vw / 2);
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 0;
+    height: 100vh;
+    transition: .5s ease;
+}
+
+section h3:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: rgba(0, 0, 0, 0);
+}
+
+section h3:hover .overlay {
+    width: 350px;
+    left: calc(100% - 350px);
+}
+
+.item-of-the-day {
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.product {
+    position: absolute;
+    top:15%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    /*Font to be changed*/
+    font-family: Arial;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.product:hover {
+    transform: scale(calc(1.1));
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.product .price {
+    color: green;
+    padding: 2px;
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+}
+
+.product h1 {
+    padding: 2px;
+}
+
+.product .button {
+    padding: 2px;
+}
+
+.button {
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    margin-top:10px;
+    cursor: pointer;
+    background-color: green;
+    color: black;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.button .button-text{
+    padding:4px;
+}
+
+.button:hover {
+    background-color: green;
+}
+
+.button:hover .button-text{
+    color: white;
+}
