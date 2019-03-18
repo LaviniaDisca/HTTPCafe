@@ -149,10 +149,8 @@ ul li:hover ul li {
 }
 
 body {
-    background-image: url('resources/background.gif');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 100vh;
+    background-image: url('resources/skulls.png');
+    background-repeat: repeat;
 }
 
 /* Should add a background like the nav(ul li) and style the shit out of it */
@@ -172,7 +170,7 @@ body {
     float: left;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-around;
     color: wheat;
     position: relative;
     z-index: 1000;

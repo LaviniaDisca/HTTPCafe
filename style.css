@@ -144,18 +144,11 @@ ul li:hover ul li {
 
 body {
     min-height: 100vh;
-    height: 100%;
-    width: 100%;
     background-image: url('resources/first-section.gif');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+    background-size: 100% 100%;
+    background-position: center;
     font-size: calc(7vw / 4);
-}
-
-@font-face {
-    font-family: chalk;
-    src: url("VTCAllSkratchedUpOne.ttf");
 }
 
 section {
