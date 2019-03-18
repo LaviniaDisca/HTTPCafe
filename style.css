@@ -187,7 +187,6 @@ section h1 {
 section h3 {
     grid-area: 3/6/span 1/span 1;
     background-color: rgba(0, 0, 0, 0.5);
-    
     border: 1px solid rgba(0,0,0,0);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -243,19 +242,23 @@ section h3:hover .overlay {
 
 .product {
     position: absolute;
-    border: 3px solid rgba(247, 121, 18, 0.808);
+    top:15%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
     border-radius: 5px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 300px;
-    top: 30%;
-    left: 50%;
-    margin-left: -150px;
-    margin-top: -125px;
     text-align: center;
     /*Font to be changed*/
     font-family: Arial;
-    padding: 2px;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.product:hover {
+    transform: scale(calc(1.1));
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .product .price {
@@ -272,7 +275,31 @@ section h3:hover .overlay {
     padding: 2px;
 }
 
-.product p {
+.product .button {
     padding: 2px;
-    color: wheat;
+}
+
+.button {
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    margin-top:10px;
+    cursor: pointer;
+    background-color: green;
+    color: black;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.button .button-text{
+    padding:4px;
+}
+
+.button:hover {
+    background-color: green;
+}
+
+.button:hover .button-text{
+    color: white;
 }
