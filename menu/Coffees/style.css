@@ -150,7 +150,9 @@ ul li:hover ul li {
 
 body {
     background-image: url('resources/background.gif');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
 }
 
 /* Should add a background like the nav(ul li) and style the shit out of it */
@@ -181,9 +183,9 @@ body {
 
 .product {
     padding: 10px;
-    border: 3px solid rgba(247, 121, 18, 0.808);
+    border: 3px solid rgba(255, 255, 255, 0.9);
     border-radius: 5px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 300px;
     text-align: center;
@@ -194,8 +196,9 @@ body {
     margin-right: 1em;
 }
 
-.product:hover{
+.product:hover {
     transform: scale(calc(1.1));
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .product .price {
@@ -212,6 +215,31 @@ body {
     padding: 2px;
 }
 
-.product p {
+.product .button {
     padding: 2px;
+}
+
+.button {
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+    margin-top:10px;
+    cursor: pointer;
+    background-color: green;
+    color: black;
+    border: 3px solid green;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.button .button-text{
+    padding:4px;
+}
+
+.button:hover {
+    background-color: green;
+}
+
+.button:hover .button-text{
+    color: white;
 }
