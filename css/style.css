@@ -180,7 +180,7 @@ section h1 {
 section h3 {
     grid-area: 3/6/span 1/span 1;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0,0,0,0);
+    border: 1px solid rgba(0, 0, 0, 0);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
@@ -188,14 +188,14 @@ section h3 {
 .arrow {
     display: table;
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 .arrow p {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
-    color:white;
+    color: white;
 }
 
 .overlay {
@@ -235,7 +235,7 @@ section h3:hover .overlay {
 
 .product {
     position: absolute;
-    top:15%;
+    top: 15%;
     border: 3px solid rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -276,7 +276,7 @@ section h3:hover .overlay {
     text-align: center;
     display: inline-block;
     font-size: 1em;
-    margin-top:10px;
+    margin-top: 10px;
     cursor: pointer;
     background-color: green;
     color: black;
@@ -285,14 +285,14 @@ section h3:hover .overlay {
     padding: 20px;
 }
 
-.button .button-text{
-    padding:4px;
+.button .button-text {
+    padding: 4px;
 }
 
 .button:hover {
     background-color: green;
 }
 
-.button:hover .button-text{
+.button:hover .button-text {
     color: white;
 }

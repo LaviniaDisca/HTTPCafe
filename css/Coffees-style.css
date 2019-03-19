@@ -117,8 +117,25 @@ ul li {
     background-color: rgba(0, 0, 0, 0.5);
     line-height: 2em;
     text-align: center;
-    font-size: calc(7vw / 4);
     margin-right: 2px;
+}
+
+@media only screen and (min-width: 900px) {
+    ul li {
+        font-size: calc(13px + 1vw);
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+    ul li {
+        font-size: calc(9px + 2vw);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    ul li {
+        font-size: calc(9px + 1vw);
+    }
 }
 
 ul li a {
@@ -156,14 +173,38 @@ body {
 /* Should add a background like the nav(ul li) and style the shit out of it */
 
 .title {
-    font-size: calc(14vw / 4);
     color: white;
-    padding: 20px;
+    padding: 1em;
     text-align: center;
     height: 2em;
     line-height: 3em;
     /*Font to be changed*/
     font-family: Arial;
+}
+
+@media only screen and (min-width: 900px) {
+    .title {
+        font-size: calc(18px + 2vw);
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+    .title {
+        font-size: calc(14px + 2vw);
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .nav-icon {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .nav-option {
+        display: none;
+    }
 }
 
 .catalog {
@@ -221,7 +262,7 @@ body {
     text-align: center;
     display: inline-block;
     font-size: 1em;
-    margin-top:10px;
+    margin-top: 10px;
     cursor: pointer;
     background-color: green;
     color: black;
@@ -230,14 +271,14 @@ body {
     padding: 20px;
 }
 
-.button .button-text{
-    padding:4px;
+.button .button-text {
+    padding: 4px;
 }
 
 .button:hover {
     background-color: green;
 }
 
-.button:hover .button-text{
+.button:hover .button-text {
     color: white;
 }
