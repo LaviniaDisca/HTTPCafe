@@ -9,9 +9,22 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@media only screen and (min-width: 600) {
+    .loginbox {
+        width: 22em;
+        height: 25em;
+        padding: 5em 2em;
+    }
+}
+@media only screen and (min-width: 300) and (max-width: 600){
+    .loginbox{
+        width: 16em;
+        height: 18em;
+        padding: 5em 2em;
+    }
+}
+
 .loginbox {
-    width: 22em;
-    height: 25em;
     background: rgb(0, 0, 0);
     color: rgb(38, 160, 160);
     top: 50%;
@@ -19,12 +32,11 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 5em 2em;
 }
 
 .avatar {
     width: 6em;
-    height: 6em;;
+    height: 6em;
     border-radius: 20em;
     position: absolute;
     top: -2em;
