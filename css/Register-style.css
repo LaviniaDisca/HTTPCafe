@@ -87,3 +87,51 @@ h1 {
 .registerbox a:hover {
     color: mediumseagreen;
 }
+
+@media screen and (max-width: 600px){
+    
+.registerbox {
+    width: 18em;
+    height: 21em;
+    padding: 3em 2em;
+}
+
+.avatar {
+    width: 4em;
+    height: 4em;
+    border-radius: 13em;
+    top: -2em;
+    left: 7em;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+.registerbox p {
+    font-size: 0.8em;
+}
+
+.registerbox input {
+    font-size: 0.8em;
+}
+
+.registerbox input[type="text"], input[type="password"], input[type="email"] {
+    height: 1.5em;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.registerbox button[type="submit"] {
+    height: 1.5em;
+    color: #fff;
+    font-size: 1em;
+}
+
+.registerbox a {
+    text-decoration: none;
+    font-size: 0.8em;
+    line-height: 1em;
+}
+
+}

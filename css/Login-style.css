@@ -9,22 +9,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-@media only screen and (min-width: 600) {
-    .loginbox {
-        width: 22em;
-        height: 25em;
-        padding: 5em 2em;
-    }
-}
-@media only screen and (min-width: 300) and (max-width: 600){
-    .loginbox{
-        width: 16em;
-        height: 18em;
-        padding: 5em 2em;
-    }
-}
-
 .loginbox {
+    width: 22em;
+    height: 25em;
+    padding: 5em 2em;
     background: rgb(0, 0, 0);
     color: rgb(38, 160, 160);
     top: 50%;
@@ -98,4 +86,43 @@ h1 {
 
 .loginbox a:hover {
     color: mediumseagreen;
+}
+
+@media (max-width: 600px) {
+    .avatar {
+        width: 4em;
+        height: 4em;
+        border-radius: 13em;
+        top: -2em;
+        left: 7em;
+    }
+    .loginbox {
+        width: 18em;
+        height: 19em;
+        padding: 3em 2em;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    .loginbox p {
+        font-size: 0.8em;
+    }
+    .loginbox input {
+        font-size: 0.8em;
+    }
+    .loginbox input[type="text"], input[type="password"] {
+        height: 1.5em;
+        color: #fff;
+        font-size: 0.8em;
+    }
+    .loginbox button[type="submit"] {
+        height: 1.5em;
+        color: #fff;
+        font-size: 1em;
+    }
+    .loginbox a {
+        text-decoration: none;
+        font-size: 0.8em;
+        line-height: 1em;
+    }
 }
