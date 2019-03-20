@@ -127,3 +127,38 @@ h1 {
         line-height: 1em;
     }
 }
+
+@media (min-width: 900px) {
+    .avatar {
+        width: calc(8% + 8vw);
+        height: calc(8% + 8vw);
+        top: calc(-23% + 8vw);
+        left: calc(25% + 8vw);
+    }
+    .registerbox {
+        width: calc(39% + 19vw);
+        height: calc(60% + 19vh);
+        padding: 9% 7%;
+    }
+    h1 {
+        font-size: calc( 17% + 4vw);
+    }
+    .registerbox p {
+        font-size: calc( 4% + 3vw);
+    }
+    .registerbox input[type="text"], input[type="password"], input[type="email"] {
+        height: calc( 15% + 6vw);
+        color: #fff;
+        font-size: calc( 6% + 2vw);
+    }
+    .registerbox button[type="submit"] {
+        /* height: calc( 17% + 5vw); */
+        color: #fff;
+        font-size: calc( 8% + 3vw);
+    }
+    .registerbox a {
+        text-decoration: none;
+        font-size: calc( 10% + 2.5vw);
+        line-height: 1em;
+    }
+}
