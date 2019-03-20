@@ -96,28 +96,28 @@ h1 {
         top: calc(-2em - 5vw);
         left: calc(11em + 10vw / 2);
     }
-    .registerbox {
+    .resetbox {
         width: calc(27em + 15vw);
-        height: calc(31em + 10vw);
+        height: calc(31em + 15vw);
         padding: 5em 2em;
     }
     h1 {
         font-size: calc(2.5em + 1vw);
     }
-    .registerbox p {
+    .resetbox p {
         font-size: calc(1.2em + 1vw);
     }
-    .registerbox input[type="password"], input[type="email"] {
+    .resetbox input[type="password"], input[type="email"] {
         height: 1.5em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
-    .registerbox button[type="submit"] {
+    .resetbox button[type="submit"] {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
-    .registerbox a {
+    .resetbox a {
         text-decoration: none;
         font-size: calc((1em + 2vw) / 2);
         line-height: 1em;
