@@ -130,12 +130,11 @@ body {
 }
 
 .title {
-    color: white;
+    color: #37987A;
     text-align: center;
     height: 2em;
     line-height: 3em;
     padding: 1em;
-    /*Font to be changed*/
     font-family: 'Snell Roundhand', cursive;
     font-style: italic;
 }
@@ -169,7 +168,7 @@ body {
 }
 
 .product .price {
-    color: green;
+    color: #37987A;
     padding: 2px;
 }
 
@@ -188,9 +187,9 @@ body {
     font-size: 1em;
     margin-top: 10px;
     cursor: pointer;
-    background-color: green;
+    background-color: #37987A;
     color: black;
-    border: 3px solid green;
+    border: 3px solid #37987A;
     border-radius: 10px;
     padding: 20px;
 }
