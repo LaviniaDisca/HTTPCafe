@@ -126,35 +126,35 @@ h1 {
 
 @media (min-width: 900px) {
     .avatar {
-        width: calc(8% + 9vw);
-        height: calc(8% + 9vw);
-        top: calc(-25% + 9vw);
-        left: calc(23% + 9vw);
+        width: calc(25px + 5vw);
+        height: calc(25px + 5vw);
+        top: calc(-110px + 5vw);
+        left: calc(109px + 5vw);
     }
     .loginbox {
-        width: calc(39% + 19vw);
-        height: calc(55% + 19vh);
-        padding: 9% 7%;
+        width: calc(400px + 5vw);
+        height: calc(400px + 5vw);
+        padding: 5em 2em;
     }
     h1 {
-        font-size: calc( 17% + 5vw);
+        font-size: calc( 15px + 1.6vw);
     }
     .loginbox p {
-        font-size: calc( 4% + 3.5vw);
+        font-size: calc( 4px + 1.3vw);
     }
     .loginbox input[type="text"], input[type="password"] {
-        height: calc( 15% + 6vw);
+        height: calc( 3px + 2vw);
         color: #fff;
-        font-size: calc( 6% + 2vw);
+        font-size: calc( 4px + 1vw);
     }
     .loginbox button[type="submit"] {
-        /* height: calc( 17% + 5vw); */
+        height: 2em;
         color: #fff;
-        font-size: calc( 8% + 3vw);
+        font-size: calc( 8px + 1vw);
     }
     .loginbox a {
         text-decoration: none;
-        font-size: calc( 10% + 2vw);
+        font-size: calc( 8px+ 1.5vw);
         line-height: 1em;
     }
 }

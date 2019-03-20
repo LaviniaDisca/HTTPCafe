@@ -128,37 +128,38 @@ h1 {
     }
 }
 
+
 @media (min-width: 900px) {
     .avatar {
-        width: calc(8% + 8vw);
-        height: calc(8% + 8vw);
-        top: calc(-23% + 8vw);
-        left: calc(25% + 8vw);
+        width: calc(25px + 5vw);
+        height: calc(25px + 5vw);
+        top: calc(-110px + 5vw);
+        left: calc(109px + 5vw);
     }
     .registerbox {
-        width: calc(39% + 19vw);
-        height: calc(60% + 19vh);
-        padding: 9% 7%;
+        width: calc(410px + 5vw);
+        height: calc(450px + 5vw);
+        padding: 5em 2em;
     }
     h1 {
-        font-size: calc( 17% + 4vw);
+        font-size: calc( 15px + 1.6vw);
     }
     .registerbox p {
-        font-size: calc( 4% + 3vw);
+        font-size: calc( 4px + 1.3vw);
     }
     .registerbox input[type="text"], input[type="password"], input[type="email"] {
-        height: calc( 15% + 6vw);
+        height: calc( 3px + 2vw);
         color: #fff;
-        font-size: calc( 6% + 2vw);
+        font-size: calc( 4px + 1vw);
     }
     .registerbox button[type="submit"] {
-        /* height: calc( 17% + 5vw); */
+        height: 2em;
         color: #fff;
-        font-size: calc( 8% + 3vw);
+        font-size: calc( 8px + 1vw);
     }
     .registerbox a {
         text-decoration: none;
-        font-size: calc( 10% + 2.5vw);
+        font-size: calc( 9px+ 1.3vw);
         line-height: 1em;
     }
 }
