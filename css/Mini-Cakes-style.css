@@ -38,13 +38,13 @@ ul li {
 
 @media only screen and (min-width: 900px) {
     ul li {
-        font-size: calc(13px + 1vw);
+        font-size: calc(7px + 1vw);
     }
     .title {
-        font-size: calc(18px + 2vw);
+        font-size: calc(12px + 2vw);
     }
     .catalog {
-        font-size: calc(13px + 1vw);
+        font-size: calc(7px + 1vw);
     }
     .product {
         width: calc(240px + 5vw);
@@ -125,7 +125,8 @@ ul li:hover ul li {
 
 body {
     background-image: url('../images/trial.jpg');
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .title {
@@ -134,9 +135,9 @@ body {
     height: 2em;
     line-height: 3em;
     padding: 1em;
-    text-decoration: underline;
     /*Font to be changed*/
-    font-family: Arial;
+    font-family: 'Snell Roundhand', cursive;
+    font-style: italic;
 }
 
 .catalog {

@@ -32,7 +32,7 @@ ul li {
 
 @media only screen and (min-width: 900px) {
     ul li {
-        font-size: calc(13px + 1vw);
+        font-size: calc(7px + 1vw);
     }
     .product {
         width: calc(240px + 5vw);
