@@ -89,37 +89,37 @@ h1 {
     color: mediumseagreen;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1920px) {
     .avatar {
-        width: 6em;
-        height: 6em;
-        top: -2em;
-        left: 11em;
+        width: calc(6em + 5vw);
+        height: calc(6em + 5vw);
+        top: calc(-2em - 5vw);
+        left: calc(11em + 10vw / 2);
     }
-    .resetbox {
-        width: 28em;
-        height: 32em;
+    .registerbox {
+        width: calc(27em + 15vw);
+        height: calc(31em + 10vw);
         padding: 5em 2em;
     }
     h1 {
-        font-size: 2.5em;
+        font-size: calc(2.5em + 1vw);
     }
-    .resetbox p {
-        font-size: 1.4em;
+    .registerbox p {
+        font-size: calc(1.2em + 1vw);
     }
-    .resetbox input[type="password"], input[type="email"] {
+    .registerbox input[type="password"], input[type="email"] {
         height: 1.5em;
         color: #fff;
-        font-size: 1.3em;
+        font-size: calc(1.1em + 1vw);
     }
-    .resetbox button[type="submit"] {
+    .registerbox button[type="submit"] {
         height: 2em;
         color: #fff;
-        font-size: 1.3em;
+        font-size: calc(1.1em + 1vw);
     }
-    .resetbox a {
+    .registerbox a {
         text-decoration: none;
-        font-size: 1em;
+        font-size: calc((1em + 2vw) / 2);
         line-height: 1em;
     }
 }

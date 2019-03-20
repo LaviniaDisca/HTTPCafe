@@ -124,7 +124,7 @@ h1 {
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1920px) {
     .avatar {
         width: calc(6em + 5vw);
         height: calc(6em + 5vw);
