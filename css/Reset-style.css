@@ -89,41 +89,37 @@ h1 {
     color: mediumseagreen;
 }
 
-@media screen and (max-width: 600px) {
-    .resetbox {
-        width: 18em;
-        height: 21em;
-        padding: 3em 2em;
-    }
+@media (min-width: 900px) {
     .avatar {
-        width: 4em;
-        height: 4em;
-        border-radius: 13em;
+        width: 6em;
+        height: 6em;
         top: -2em;
-        left: 7em;
+        left: 11em;
+    }
+    .resetbox {
+        width: 28em;
+        height: 32em;
+        padding: 5em 2em;
     }
     h1 {
-        font-size: 1.4em;
+        font-size: 2.5em;
     }
     .resetbox p {
-        font-size: 0.8em;
-    }
-    .resetbox input {
-        font-size: 0.8em;
+        font-size: 1.4em;
     }
     .resetbox input[type="password"], input[type="email"] {
         height: 1.5em;
         color: #fff;
-        font-size: 0.8em;
+        font-size: 1.3em;
     }
     .resetbox button[type="submit"] {
-        height: 1.5em;
+        height: 2em;
         color: #fff;
-        font-size: 1em;
+        font-size: 1.3em;
     }
     .resetbox a {
         text-decoration: none;
-        font-size: 0.8em;
+        font-size: 1em;
         line-height: 1em;
     }
 }

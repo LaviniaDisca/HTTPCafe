@@ -126,35 +126,35 @@ h1 {
 
 @media (min-width: 900px) {
     .avatar {
-        width: calc(25px + 5vw);
-        height: calc(25px + 5vw);
-        top: calc(-110px + 5vw);
-        left: calc(109px + 5vw);
+        width: 6em;
+        height: 6em;
+        top: -2em;
+        left: 10.2em;
     }
     .loginbox {
-        width: calc(400px + 5vw);
-        height: calc(400px + 5vw);
+        width: 27em;
+        height: 31em;
         padding: 5em 2em;
     }
     h1 {
-        font-size: calc( 15px + 1.6vw);
+        font-size: 2.7em;
     }
     .loginbox p {
-        font-size: calc( 4px + 1.3vw);
+        font-size: 1.4em;
     }
     .loginbox input[type="text"], input[type="password"] {
-        height: calc( 3px + 2vw);
+        height: 1.5em;
         color: #fff;
-        font-size: calc( 4px + 1vw);
+        font-size: 1.3em;
     }
     .loginbox button[type="submit"] {
         height: 2em;
         color: #fff;
-        font-size: calc( 8px + 1vw);
+        font-size: 1.3em;
     }
     .loginbox a {
         text-decoration: none;
-        font-size: calc( 8px+ 1.5vw);
+        font-size: 1em;
         line-height: 1em;
     }
 }
