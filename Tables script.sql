@@ -11,7 +11,7 @@ CREATE TABLE `products`
   `name` varchar(255),
   `photo_path` varchar(255),
   `price` int,
-  `quantity` int
+  `stock` int
 );
 
 CREATE TABLE `users`
