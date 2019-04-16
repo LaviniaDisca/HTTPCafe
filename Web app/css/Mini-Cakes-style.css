@@ -146,6 +146,7 @@ body {
     justify-content: space-around;
     position: relative;
     z-index: 1000;
+    margin-bottom:2em;
 }
 
 .product {

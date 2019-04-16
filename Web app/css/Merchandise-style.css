@@ -146,6 +146,7 @@ body {
     justify-content: space-around;
     position: relative;
     z-index: 1000;
+	margin-bottom:2em;
 }
 
 .product {
@@ -160,6 +161,7 @@ body {
     margin-top: 2em;
     margin-left: 1em;
     margin-right: 1em;
+	
 }
 
 .product:hover {
