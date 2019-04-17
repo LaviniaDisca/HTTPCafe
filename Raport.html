@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project report</title>
+</head>
+
+<body prefix="schema: http://schema.org">
+    <header>
+        <h1>
+            HTTPcaffe raport
+        </h1>
+        <div role="contentinfo">
+            <section typeof="sa:AuthorsList">
+                <h2>Autori</h2>
+                <ul>
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                            <meta property="schema:givenName" content="Marius">
+                            <meta property="schema:additionalName" content="Marian">
+                            <meta property="schema:familyName" content="Blaj">
+                            <span property="schema:name">Marius M. Blaj</span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailto:marius.blaj@info.uaic.ro"
+                                    property="schema:email">marius.blaj@info.uaic.ro</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                            <meta property="schema:givenName" content="Lavinia">
+                            <meta property="schema:familyName" content="Disca">
+                            <span property="schema:name">Lavinia Disca</span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailto:lavinia.disca@info.uaic.ro"
+                                    property="schema:email">lavinia.disca@info.uaic.ro</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </header>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+        <h2>Abstract</h2>
+        <p>
+            Acest raport contine cerintele tehnice ce vor fi implementate, ce tehnologii vor fi utilizate si cu ce se va
+            ocupa fiecare membru al echipei.
+        </p>
+    </section>
+    <section>
+        <h3>Obiective</h3>
+        <p>
+            Ne propunem ca la accesarea paginii web a cafenelei, utilizatorul sa fie intampinat de pagina de logare in
+            aplicatie. Dupa logare,
+            acesta este directionat spre alegerea unui loc liber de la o masa din cafenea; i se va afisa repartizarea
+            meselor, iar el trebuie sa aleaga locul. Odata ce a fost asezat la masa
+            utilizatorul va putea accesa meniul cafenelei, unde sunt afisate toate produsele disponibile sau sectiunea
+            de gift shop, de unde utilizatorul poate achizitiona diferite
+            bunuri cu inscriptii cu specific domeniului IT. Daca utilizatorul doreste sa cumpere un produs, acesta il
+            poate adauga in cosul de cumparaturi, de unde mai tarziu il si poate elimina daca se razgandeste.
+            Cand este decis, utilizatorul nu trebuie decat sa plaseze comanda. Dupa achizitionarea bunurilor dorite,
+            utilizatorul se poate deloga, astfel locul ocupat de acesta la masa va deveni liber.
+            Daca intr-o perioada de 30 de minute utlizatorul nu mai efectueaza nicio comanda, locul ocupat de acesta va
+            fi automat eliberat.
+            In cazul in care un utilizator isi uita parola, acesta are posibilitatea de a si-o schimba, folosindu-se de
+            adresa de email.
+        </p>
+    </section>
+    <section id="techs">
+        <h3>Tehnologii utilizate</h3>
+        <ul>
+            <li>PHP pentru implementarea functionalitatilor</li>
+            <li>CSS pentru stilizarea paginilor</li>
+            <li>SQL pentru managementul bazei de date</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Use Case Diagram</h3>
+        <figure typeof="sa:image">
+            <img src="UseCaseDiagram.png" alt="Use Case Diagram">
+        </figure>
+    </section>
+    <section>
+        <h3>Class Diagram</h3>
+        <figure typeof="sa:image">
+            <img src="ClassDiagram.png" alt="Class Diagram">
+        </figure>
+    </section>
+    <section>
+        <h3>Database Diagram</h3>
+        <figure typeof="sa:image">
+            <img src="DatabaseDiagram.png" alt="Database Diagram">
+        </figure>
+    </section>
+    <section>
+        <h3>Tasks per membru</h3>
+        <ul>
+            <li>
+                Blaj Marius
+                <ul>
+                    <li>
+                        legarea bazei de date de PHP
+                    </li>
+                    <li>
+                        implementare controllere
+                    </li>
+                    <li>
+                      implementare paginii home (unde utilizatorii isi pot alege locul la masa)
+                    </li>
+                    <li>
+                        modificare view-uri
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Disca Lavinia
+                <ul>
+                    <li>
+                        implementarea paginilor de login,register si change password
+                    </li>
+                    <li>
+                        crearea bazei de date
+                    </li>
+                    <li>
+                        inserarea in baza de date
+                    </li>
+                    <li>
+                        implementarea functionalitatilor modelelor
+                    </li>
+                    <li>
+                        implementare controllere
+                    </li>
+                    <li>
+                        implementare paginii home (unde utilizatorii isi pot alege locul la masa)
+                    </li>
+                    <li>
+                        modificare view-uri
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
