@@ -1,7 +1,7 @@
 CREATE TABLE `carts`
 (
+  `id` int PRIMARY KEY,
   `user_id` int,
-  `product_id` int,
   `quantity` int
 );
 
@@ -25,12 +25,27 @@ CREATE TABLE `users`
 CREATE TABLE `tables`
 (
   `id` int PRIMARY KEY,
-  `user_id` int,
   `seats` int
+);
+
+CREATE TABLE `table_users`
+(
+  `table_id` int,
+  `user_id` int
+);
+
+CREATE TABLE `cart_products`
+(
+  `cart_id` int,
+  `product_id` int
 );
 
 ALTER TABLE `carts` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
-ALTER TABLE `products` ADD FOREIGN KEY (`id`) REFERENCES `carts` (`product_id`);
+ALTER TABLE `cart_products` ADD FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
 
-ALTER TABLE `users` ADD FOREIGN KEY (`id`) REFERENCES `tables` (`user_id`);
+ALTER TABLE `cart_products` ADD FOREIGN KEY (`cart_id`) REFERENCES `carts` (`id`);
+
+ALTER TABLE `table_users` ADD FOREIGN KEY (`table_id`) REFERENCES `tables` (`id`);
+
+ALTER TABLE `table_users` ADD FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
