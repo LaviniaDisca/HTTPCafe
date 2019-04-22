@@ -80,66 +80,7 @@
         Freshes
     </p>
 
-    <div class="catalog">
-        <div class="product">
-            <img src="public/images/strawberry.png" alt="image">
-            <h1>Hibiscus Strawberry Rhubarb Iced Tea</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/punch.jpg" alt="image">
-            <h1>Fruit Punch Lemonade</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/pin.jpg" alt="image">
-            <h1>Pineapple Ginger Sparkler</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/ice.jpg" alt="image">
-            <h1>Sparkling Mint-Lime Iced Tea</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/paloma.jpg" alt="image">
-            <h1>Paloma Fizz Mocktails</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/lemonade.jpg" alt="image">
-            <h1>Basil Lemonade Punch</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/pome.jpg" alt="image">
-            <h1>Pomegranate mocktail</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-    </div>
+    <?php echo $data; ?>
 </main>
 </body>
 

@@ -79,59 +79,7 @@
     <p class="title">
         Merchandise
     </p>
-
-    <div class="catalog">
-        <div class="product">
-            <img src="public/images/cofmug.jpg" alt="Image">
-            <h1>Coffee Mug</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/cofmug2.jpg" alt="Image">
-            <h1>Programmer Mug</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/cofmug3.jpg" alt="Image">
-            <h1>Bug Mug</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/falseShirt.jpg" alt="Image">
-            <h1>The shirt of truth</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/cofcode.jpg" alt="Image">
-            <h1>Code Mug</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/cofcodeshirt.jpg" alt="Image">
-            <h1>Code Shirt</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-    </div>
+    <?php echo $data; ?>
 </main>
 </body>
 

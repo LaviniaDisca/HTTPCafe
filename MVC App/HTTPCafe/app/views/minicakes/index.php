@@ -79,75 +79,7 @@
     <p class="title">
         Mini-Cakes
     </p>
-
-    <div class="catalog">
-        <div class="product">
-            <img src="public/images/velvet.jpg" alt="Image">
-            <h1>Red Velvet</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/butter.jpg" alt="Image">
-            <h1>Butterbeer Cupcakes</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/chip.jpg" alt="Image">
-            <h1>Chocolate Chip Cookie Dough Cheesecake</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/oreo.jpg" alt="Image">
-            <h1>Oreo Cheesecake</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/peanut.jpg" alt="Image">
-            <h1>Chocolate-Peanut Butter Cheesecake</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/brownie.jpg" alt="Image">
-            <h1>Brownies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/fudge.jpg" alt="Image">
-            <h1>Hot Fudge Cheesecake</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/tiramisu.jpg" alt="Image">
-            <h1>Tiramisu Cheesecake</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-    </div>
+    <?php echo $data; ?>
 </main>
 </body>
 

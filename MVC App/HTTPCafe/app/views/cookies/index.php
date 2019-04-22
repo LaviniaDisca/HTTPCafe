@@ -79,59 +79,7 @@
     <p class="title">
         Cookies
     </p>
-
-    <div class="catalog">
-        <div class="product">
-            <img src="public/images/chocochip.jpg" alt="chocochip">
-            <h1>Chocolate Chip Cookies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/granola.jpg" alt="chocochip">
-            <h1>Healthy Five-Ingredient Granola Bar</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/oats.jpg" alt="oats">
-            <h1>Peanut Butter Oat Snack Cookies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/Macaroons.jpg" alt="macaroons">
-            <h1>Macaroons</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/madeleines.jpg" alt="madeleines">
-            <h1>Madeleines</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/frost.jpg" alt="frost">
-            <h1>Frosted Cookies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-    </div>
+    <?php echo $data; ?>
 </main>
 </body>
 

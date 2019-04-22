@@ -79,59 +79,7 @@
     <p class="title">
         Pretzels
     </p>
-
-    <div class="catalog">
-        <div class="product">
-            <img src="public/images/pretz.jpg" alt="Image">
-            <h1>Pretzels</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/croissant.jpg" alt="Image">
-            <h1>Croissants</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="public/images/donuts.jpg" alt="Image">
-            <h1>Donuts</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/sticks.jpg" alt="Image">
-            <h1>Breadsticks</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/strudel.jpg" alt="Image">
-            <h1>Apple Strudel</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="public/images/pear.jpg" alt="Image">
-            <h1>Pear Strudel</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="button-text">Order</span>
-            </button>
-        </div>
-    </div>
+    <?php echo $data; ?>
 </main>
 </body>
 
