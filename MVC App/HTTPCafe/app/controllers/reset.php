@@ -2,7 +2,7 @@
 
 class Reset extends Controller
 {
-    public function index($name = '')
+    public function index()
     {
         $this->view('Reset/index');
     }

@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="public/css/Register-style.css">
+    <link rel="stylesheet" href="<?php echo URL?>public/css/Register-style.css">
 </head>
 
 <body>
 <div class="registerbox">
-    <img src="public/images/fixcil.png" class="avatar" alt="Image">
+    <img src="<?php echo URL?>public/images/fixcil.png" class="avatar" alt="Image">
     <h1>Register here</h1>
     <form action="">
         <p>
@@ -22,7 +22,7 @@
         <p>Password : </p>
         <input type="password" name="password" placeholder="Enter password">
         <button type="submit" formaction="Login">Register</button>
-        <a href="Login">Already have an account? Login!</a>
+        <a href="<?php echo URL?>Login">Already have an account? Login!</a>
     </form>
 </div>
 </body>

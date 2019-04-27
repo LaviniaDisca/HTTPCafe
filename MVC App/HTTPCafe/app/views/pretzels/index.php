@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Pretzels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="public/css/Pretzels-style.css">
+    <link rel="stylesheet" href="<?php echo URL?>public/css/Pretzels-style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
@@ -18,28 +18,28 @@
                     <span class="nav-icon"><i class="fas fa-mug-hot"></i></span>
                     <span class="nav-option">HTTPcafe</span>
                 </a></li>
-            <li><a href="Home">
+            <li><a href="<?php echo URL?>Home">
                     <span class="nav-icon"><i class="fas fa-home"></i></span>
                     <span class="nav-option">Home</span>
                 </a></li>
-            <li><a href="Coffees">
+            <li><a href="<?php echo URL?>Coffees">
                     <span class="nav-icon"><i class="fab fa-elementor"></i></span>
                     <span class="nav-option">Menu</span>
                 </a >
                 <ul>
-                    <li><a href="Coffees">
+                    <li><a href="<?php echo URL?>Coffees">
                             <span class="nav-icon">☕</span>
                             <span class="nav-option">Coffees</span>
                         </a></li>
-                    <li><a href="Freshes">
+                    <li><a href="<?php echo URL?>Freshes">
                             <span class="nav-icon">🍹</span>
                             <span class="nav-option">Freshes</span>
                         </a></li>
-                    <li><a href="Mini-Cakes">
+                    <li><a href="<?php echo URL?>Mini-Cakes">
                             <span class="nav-icon">🍰</span>
                             <span class="nav-option">Mini-Cakes</span>
                         </a></li>
-                    <li><a href="Cookies">
+                    <li><a href="<?php echo URL?>Cookies">
                             <span class="nav-icon">🍪</span>
                             <span class="nav-option">Cookies</span>
                         </a></li>
@@ -49,7 +49,7 @@
                         </a></li>
                 </ul>
             </li>
-            <li><a href="Merchandise">
+            <li><a href="<?php echo URL?>Merchandise">
                     <span class="nav-icon"><i class="fas fa-gifts"></i></span>
                     <span class="nav-option">Merchandise</span>
                 </a></li>
@@ -58,15 +58,15 @@
                     <span class="nav-option">User</span>
                 </a>
                 <ul>
-                    <li><a href="Cart">
+                    <li><a href="<?php echo URL?>Cart">
                             <span class="nav-icon"><i class="fas fa-shopping-cart"></i></span>
                             <span class="nav-option">Cart</span>
                         </a></li>
-                    <li><a href="Reset">
+                    <li><a href="<?php echo URL?>Reset">
                             <span class="nav-icon"><i class="fas fa-key"></i></span>
                             <span class="nav-option">Change password</span>
                         </a></li>
-                    <li><a href="Login">
+                    <li><a href="<?php echo URL?>Login">
                             <span class="nav-icon"><i class="fas fa-sign-out-alt"></i></span>
                             <span class="nav-option">Log Out</span>
                         </a></li>
