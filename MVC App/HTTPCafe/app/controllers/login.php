@@ -1,4 +1,5 @@
 <?php
+require_once 'app/controllers/login.php';
 
 class Login extends Controller
 {
