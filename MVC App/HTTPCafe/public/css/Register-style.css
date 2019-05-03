@@ -60,7 +60,7 @@ h1 {
     font-size: 1em;
 }
 
-.registerbox button[type="submit"] {
+.registerbox .button {
     border: none;
     outline: none;
     width: 100%;
@@ -72,7 +72,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-.registerbox button[type="submit"]:hover {
+.registerbox .button:hover {
     cursor: pointer;
     background: mediumseagreen;
     color: #000;
@@ -116,7 +116,7 @@ h1 {
         color: #fff;
         font-size: 0.8em;
     }
-    .registerbox button[type="submit"] {
+    .registerbox .button {
         height: 1.5em;
         color: #fff;
         font-size: 1em;
@@ -151,7 +151,7 @@ h1 {
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
-    .registerbox button[type="submit"] {
+    .registerbox .button {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);

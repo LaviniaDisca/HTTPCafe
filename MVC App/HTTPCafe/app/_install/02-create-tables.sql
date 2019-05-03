@@ -1,13 +1,13 @@
 CREATE TABLE `httpcafe`.`carts`
 (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
   `quantity` int
 );
 
 CREATE TABLE `httpcafe`.`products`
 (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `type` varchar(255),
   `name` varchar(255),
   `photo_path` varchar(255),
@@ -17,7 +17,7 @@ CREATE TABLE `httpcafe`.`products`
 
 CREATE TABLE `httpcafe`.`users`
 (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `username` varchar(255) UNIQUE,
   `email` varchar(255) UNIQUE,
   `password` varchar(255)
@@ -25,7 +25,7 @@ CREATE TABLE `httpcafe`.`users`
 
 CREATE TABLE `httpcafe`.`tables`
 (
-  `id` int PRIMARY KEY,
+  `id` int PRIMARY KEY AUTO_INCREMENT,
   `seats` int
 );
 

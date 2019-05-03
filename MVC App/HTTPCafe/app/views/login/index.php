@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +12,11 @@
 <div class="loginbox">
     <img src="<?php echo URL?>public/images/fixcil.png" class="avatar" alt="Image">
     <h1>Sign in</h1>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form action="">
         <p>
             Username :
         </p>
-        <input type="text" name="username" placeholder="Enter username" >
+        <input type="text" name="username" placeholder="Enter username">
         <p>Password : </p>
         <input type="password" name="password" placeholder="Enter password">
         <button type="submit" formaction="Home"> Login</button>
