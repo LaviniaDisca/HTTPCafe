@@ -16,21 +16,23 @@ class Login extends Controller
 
             $user_model = $this->loadModel('UserModel');
             $result = $user_model->getInfo($username);
-            if (!empty($result)) {
-                $verify = password_verify($password, $result['password']);
-                if ($verify == true) {
-                    session_start();
-                    $_SESSION['userID'] = $result['id'];
-                    if (isset($_SESSION['userID'])) {
-                        header('Location: ' . URL . 'Home');
+            foreach ($result as $res) {
+                if (!empty($res)) {
+                    $verify = password_verify($password, $res->password);
+                    if ($verify == true) {
+                        session_start();
+                        $_SESSION['userID'] = $res->id;
+                        if (isset($_SESSION['userID'])) {
+                            header('Location: ' . URL . 'Home');
+                        } else {
+                            header('Location: ' . URL . 'Login');
+                        }
                     } else {
-                        header('Location: ' . URL . 'Login');
+                        //handle wrong password
                     }
                 } else {
-                    //handle wrong password
+                    //handle no user found
                 }
-            } else {
-                //handle no user found
             }
         }
     }
