@@ -12,13 +12,13 @@
 <div class="loginbox">
     <img src="<?php echo URL?>public/images/fixcil.png" class="avatar" alt="Image">
     <h1>Sign in</h1>
-    <form action="">
+    <form action="<?php echo URL?>Login/sigIn" method="post" enctype="multipart/form-data">
         <p>
             Username :
         </p>
-        <input type="text" name="username" placeholder="Enter username">
+        <input type="text" name="username" placeholder="Enter username" required>
         <p>Password : </p>
-        <input type="password" name="password" placeholder="Enter password">
+        <input type="password" name="password" placeholder="Enter password" required>
         <button type="submit" formaction="Home"> Login</button>
         <a href="<?php echo URL?>Register">Don't have an account? Sign up!</a>
     </form>

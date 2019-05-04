@@ -14,7 +14,7 @@ class Register extends Controller
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $email = $_POST['email'];
-            $password = $_POST['password'];
+            $password = md5($_POST['password']);
             $user_model = $this->loadModel('UserModel');
             $used = $user_model->exists($username);
             if ($used) {
