@@ -59,7 +59,7 @@ h1 {
     font-size: 1em;
 }
 
-.loginbox button[type="submit"] {
+.loginbox .button {
     border: none;
     outline: none;
     width: 100%;
@@ -71,7 +71,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-.loginbox button[type="submit"]:hover {
+.loginbox .button:hover {
     cursor: pointer;
     background: mediumseagreen;
     color: #000;
@@ -112,7 +112,7 @@ h1 {
         color: #fff;
         font-size: 0.8em;
     }
-    .loginbox button[type="submit"] {
+    .loginbox .button {
         height: 1.5em;
         color: #fff;
         font-size: 1em;
@@ -147,7 +147,7 @@ h1 {
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
-    .loginbox button[type="submit"] {
+    .loginbox .button {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
