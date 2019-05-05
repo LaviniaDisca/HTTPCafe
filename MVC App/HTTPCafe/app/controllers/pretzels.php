@@ -7,6 +7,8 @@ class Pretzels extends Controller
     {
         $obj = new Product();
         $catalog = $obj->getProductCatalog('pretzel');
-        $this->view('Pretzels/index', $catalog);
+        $data['catalog']=$catalog;
+        $data['username']=$this->getUsername();
+        $this->view('Pretzels/index', $data);
     }
 }

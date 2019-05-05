@@ -7,6 +7,8 @@ class MiniCakes extends Controller
     {
         $obj = new Product();
         $catalog = $obj->getProductCatalog('mini-cake');
-        $this->view('minicakes/index', $catalog);
+        $data['catalog']=$catalog;
+        $data['username']=$this->getUsername();
+        $this->view('minicakes/index', $data);
     }
 }

@@ -56,7 +56,7 @@
                 </a></li>
             <li><a>
                     <span class="nav-icon"><i class="fas fa-user-alt"></i></span>
-                    <span class="nav-option">User</span>
+                    <span class="nav-option"><?php echo $data['username']; ?></span>
                 </a>
                 <ul>
                     <li><a>
@@ -67,7 +67,7 @@
                             <span class="nav-icon"><i class="fas fa-key"></i></span>
                             <span class="nav-option">Change password</span>
                         </a></li>
-                    <li><a href="<?php echo URL?>Login">
+                    <li><a href="<?php echo URL?>Login/logOut">
                             <span class="nav-icon"><i class="fas fa-sign-out-alt"></i></span>
                             <span class="nav-option">Log Out</span>
                         </a></li>
@@ -81,67 +81,8 @@
         Cart
     </p>
 
-    <div class="catalog">
-        <div class="product">
-            <img src="<?php echo URL?>public/images/chocochip.jpg" alt="chocochip">
-            <h1>Chocolate Chip Cookies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="remove-sign"><i class="fas fa-times"></i></span>
-                <span class="button-text">Remove</span>
-            </button>
-        </div>
+    <?php echo $data['catalog']; ?>
 
-        <div class="product">
-            <img src="<?php echo URL?>public/images/granola.jpg" alt="granola">
-            <h1>Healthy Five-Ingredient Granola Bar</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="remove-sign"><i class="fas fa-times"></i></span>
-                <span class="button-text">Remove</span>
-            </button>
-        </div>
-
-        <div class="product">
-            <img src="<?php echo URL?>public/images/oats.jpg" alt="oats">
-            <h1>Peanut Butter Oat Snack Cookies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="remove-sign"><i class="fas fa-times"></i></span>
-                <span class="button-text">Remove</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="<?php echo URL?>public/images/Macaroons.jpg" alt="macaroons">
-            <h1>Macaroons</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="remove-sign"><i class="fas fa-times"></i></span>
-                <span class="button-text">Remove</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="<?php echo URL?>public/images/madeleines.jpg" alt="madeleines">
-            <h1>Madeleines</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="remove-sign"><i class="fas fa-times"></i></span>
-                <span class="button-text">Remove</span>
-            </button>
-        </div>
-        <div class="product">
-            <img src="<?php echo URL?>public/images/frost.jpg" alt="frost">
-            <h1>Frosted Cookies</h1>
-            <p class="price">$19.99</p>
-            <button class="button">
-                <span class="remove-sign"><i class="fas fa-times"></i></span>
-                <span class="button-text">Remove</span>
-            </button>
-        </div>
-        <button class="order">
-            <span class="button-text"> <b>Place order</b></span>
-        </button>
-    </div>
 </main>
 </body>
 

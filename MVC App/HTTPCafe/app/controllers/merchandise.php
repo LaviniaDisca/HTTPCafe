@@ -8,6 +8,8 @@ class Merchandise extends Controller
     {
         $obj = new Product();
         $catalog = $obj->getProductCatalog('merch');
-        $this->view('Merchandise/index', $catalog);
+        $data['catalog']=$catalog;
+        $data['username']=$this->getUsername();
+        $this->view('Merchandise/index', $data);
     }
 }

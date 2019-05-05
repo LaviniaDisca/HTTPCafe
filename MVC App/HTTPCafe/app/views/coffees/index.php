@@ -54,7 +54,7 @@
                 </a></li>
             <li><a>
                     <span class="nav-icon"><i class="fas fa-user-alt"></i></span>
-                    <span class="nav-option">User</span>
+                    <span class="nav-option"><?php echo $data['username']; ?></span>
                 </a>
                 <ul>
                     <li><a href="<?php echo URL?>Cart">
@@ -65,7 +65,7 @@
                             <span class="nav-icon"><i class="fas fa-key"></i></span>
                             <span class="nav-option">Change password</span>
                         </a></li>
-                    <li><a href="<?php echo URL?>Login">
+                    <li><a href="<?php echo URL?>Login/logOut">
                             <span class="nav-icon"><i class="fas fa-sign-out-alt"></i></span>
                             <span class="nav-option">Log Out</span>
                         </a></li>
@@ -78,7 +78,7 @@
     <p class="title">
         Coffees
     </p>
-    <?php echo $data; ?>
+    <?php echo $data['catalog']; ?>
 </main>
 </body>
 

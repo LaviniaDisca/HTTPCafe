@@ -37,6 +37,14 @@ class UserModel
         $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
         $query = $this->db->prepare($sql);
         $query->execute(array(":username" => $username, ":email" => $email, ":password" => $password));
+        /*//get the created id
+        $sql = "SELECT id FROM users where username='" . $username . "'";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        $sql = "INSERT INTO carts (user_id, email, password) VALUES (:username, :email, :password)";
+        $query = $this->db->prepare($sql);
+        $query->execute(array(":username" => $username, ":email" => $email, ":password" => $password));*/
     }
 
     public function getInfo($username)
@@ -44,8 +52,17 @@ class UserModel
         $sql = "SELECT * FROM users where username='" . $username . "'";
         $query = $this->db->prepare($sql);
         $query->execute();
-        $results = $query->fetchAll();
+        $results = $query->fetch(PDO::FETCH_ASSOC);
         return $results;
+    }
+
+    public function getUsername($userID)
+    {
+        $sql = "SELECT username FROM users where id='" . $userID . "'";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $result = $query->fetch(PDO::FETCH_ASSOC);
+        return $result;
     }
 }
 

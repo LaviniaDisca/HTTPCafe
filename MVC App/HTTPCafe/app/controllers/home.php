@@ -4,6 +4,7 @@ class Home extends Controller
 {
     public function index()
     {
-        $this->view('home/index');
+        $data['username']=$this->getUsername();
+        $this->view('home/index', $data);
     }
 }

@@ -41,7 +41,7 @@ INSERT INTO `products` (`id`, `type`, `name`, `photo_path`, `price`, `stock`) VA
 INSERT INTO `products` (`id`, `type`, `name`, `photo_path`, `price`, `stock`) VALUES
 ('29', 'pretzel', 'Pretzels', 'pretz.jpg', '3.88', '110'),
 ('30', 'pretzel', 'Croissants', 'croissant.jpg', '3.50', '70'),
-('31', 'pretzel', 'Donuts', 'donut.jpg', '5.99', '100'),
+('31', 'pretzel', 'Donuts', 'donuts.jpg', '5.99', '100'),
 ('32', 'pretzel', 'Breadsticks', 'sticks.jpg', '0.59', '120'),
 ('33', 'pretzel', 'Apple Strudel', 'strudel.jpg', '7.99', '55'),
 ('34', 'pretzel', 'Pear Strudel', 'pear.jpg', '7.99', '40');

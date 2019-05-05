@@ -8,6 +8,8 @@ class Coffees extends Controller
     {
         $obj = new Product();
         $catalog = $obj->getProductCatalog('coffee');
-        $this->view('Coffees/index', $catalog);
+        $data['catalog']=$catalog;
+        $data['username']=$this->getUsername();
+        $this->view('Coffees/index', $data);
     }
 }

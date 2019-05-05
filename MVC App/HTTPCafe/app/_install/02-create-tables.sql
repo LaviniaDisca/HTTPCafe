@@ -1,7 +1,7 @@
 CREATE TABLE `httpcafe`.`carts`
 (
-  `id` int PRIMARY KEY AUTO_INCREMENT,
   `user_id` int,
+  `product_id` int,
   `quantity` int
 );
 
@@ -35,17 +35,10 @@ CREATE TABLE `httpcafe`.`table_users`
   `user_id` int
 );
 
-CREATE TABLE `httpcafe`.`cart_products`
-(
-  `cart_id` int,
-  `product_id` int
-);
 
 ALTER TABLE `httpcafe`.`carts` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
 
-ALTER TABLE `httpcafe`.`cart_products` ADD FOREIGN KEY (`product_id`) REFERENCES `httpcafe`.`products` (`id`);
-
-ALTER TABLE `httpcafe`.`cart_products` ADD FOREIGN KEY (`cart_id`) REFERENCES `httpcafe`.`carts` (`id`);
+ALTER TABLE `httpcafe`.`carts` ADD FOREIGN KEY (`product_id`) REFERENCES `httpcafe`.`products` (`id`);
 
 ALTER TABLE `httpcafe`.`table_users` ADD FOREIGN KEY (`table_id`) REFERENCES `httpcafe`.`tables` (`id`);
 

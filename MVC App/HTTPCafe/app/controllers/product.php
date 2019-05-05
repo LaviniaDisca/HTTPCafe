@@ -22,7 +22,6 @@ class Product extends Controller
             $catalog = $catalog . '</form>';
             $catalog = $catalog . '</div>';
         }
-
         $catalog = $catalog . '</div>';
         return $catalog;
     }

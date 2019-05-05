@@ -4,6 +4,7 @@ class Login extends Controller
 {
     public function index()
     {
+        session_start();
         $this->view('Login/index');
     }
 
@@ -16,24 +17,29 @@ class Login extends Controller
 
             $user_model = $this->loadModel('UserModel');
             $result = $user_model->getInfo($username);
-            foreach ($result as $res) {
-                if (!empty($res)) {
-                    $verify = password_verify($password, $res->password);
-                    if ($verify == true) {
-                        session_start();
-                        $_SESSION['userID'] = $res->id;
-                        if (isset($_SESSION['userID'])) {
-                            header('Location: ' . URL . 'Home');
-                        } else {
-                            header('Location: ' . URL . 'Login');
-                        }
+            if (!empty($result)) {
+                $verify = password_verify($password, $result['password']);
+                if ($verify == true) {
+                    session_start();
+                    $_SESSION['userID'] = $result['id'];
+                    if (isset($_SESSION['userID'])) {
+                        header('Location: ' . URL . 'Home');
                     } else {
-                        //handle wrong password
+                        header('Location: ' . URL . 'Login');
                     }
                 } else {
-                    //handle no user found
+                    //handle wrong password
                 }
+            } else {
+                //handle no user found
             }
         }
+    }
+
+    public function logOut()
+    {
+        session_start();
+        unset($_SESSION['userID']);
+        header('Location: ' . URL . 'Login');
     }
 }

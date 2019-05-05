@@ -7,6 +7,8 @@ class Cookies extends Controller
     {
         $obj = new Product();
         $catalog = $obj->getProductCatalog('cookie');
-        $this->view('Cookies/index', $catalog);
+        $data['catalog']=$catalog;
+        $data['username']=$this->getUsername();
+        $this->view('Cookies/index', $data);
     }
 }

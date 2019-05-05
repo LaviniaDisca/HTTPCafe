@@ -27,12 +27,23 @@ class Controller
 
     public function loadModel($model)
     {
-        require_once 'app/models/'.$model.'.php';
+        require_once 'app/models/' . $model . '.php';
         return new $model($this->db);
     }
 
-    public function view($view,$data=[])
+    public function view($view, $data = [])
     {
-        require_once 'app/views/'.$view.'.php';
+        require_once 'app/views/' . $view . '.php';
+    }
+
+    public function getUsername()
+    {
+        session_start();
+        if (!isset($_SESSION["userID"])) {
+            header('Location: ' . URL . 'Login');
+        }
+        $user_model = $this->loadModel('UserModel');
+        $result = $user_model->getUsername($_SESSION["userID"]);
+        return $result['username'];
     }
 }

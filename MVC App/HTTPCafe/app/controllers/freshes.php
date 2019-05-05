@@ -8,6 +8,8 @@ class Freshes extends Controller
     {
         $obj = new Product();
         $catalog = $obj->getProductCatalog('fresh');
-        $this->view('Freshes/index', $catalog);
+        $data['catalog']=$catalog;
+        $data['username']=$this->getUsername();
+        $this->view('Freshes/index', $data);
     }
 }
