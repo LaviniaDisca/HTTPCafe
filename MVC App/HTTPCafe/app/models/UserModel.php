@@ -47,6 +47,13 @@ class UserModel
         $query->execute(array(":username" => $username, ":email" => $email, ":password" => $password));*/
     }
 
+    public function updatePass($email, $password)
+    {
+        $sql = " UPDATE users set password = '" . $password . "' where email = '" . $email . "' ";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+    }
+
     public function getInfo($username)
     {
         $sql = "SELECT * FROM users where username='" . $username . "'";
@@ -63,6 +70,15 @@ class UserModel
         $query->execute();
         $result = $query->fetch(PDO::FETCH_ASSOC);
         return $result;
+    }
+
+    public function getUpdate($email)
+    {
+        $sql = "SELECT * FROM users where email='" . $email . "'";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        $results = $query->fetch(PDO::FETCH_ASSOC);
+        return $results;
     }
 }
 

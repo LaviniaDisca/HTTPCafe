@@ -24,8 +24,7 @@ body {
 
 .avatar {
     width: 6em;
-    height: 6em;
-    ;
+    height: 6em;;
     border-radius: 20em;
     position: absolute;
     top: -2em;
@@ -60,7 +59,7 @@ h1 {
     font-size: 1em;
 }
 
-.resetbox button[type="submit"] {
+.resetbox .button {
     border: none;
     outline: none;
     width: 100%;
@@ -72,7 +71,7 @@ h1 {
     margin-bottom: 1em;
 }
 
-.resetbox button[type="submit"]:hover {
+.resetbox .button:hover {
     cursor: pointer;
     background: mediumseagreen;
     color: #000;
@@ -96,27 +95,33 @@ h1 {
         top: calc(-2em - 5vw);
         left: calc(11em + 10vw / 2);
     }
+
     .resetbox {
         width: calc(27em + 15vw);
         height: calc(31em + 15vw);
         padding: 5em 2em;
     }
+
     h1 {
         font-size: calc(2.5em + 1vw);
     }
+
     .resetbox p {
         font-size: calc(1.2em + 1vw);
     }
+
     .resetbox input[type="password"], input[type="email"] {
         height: 1.5em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
-    .resetbox button[type="submit"] {
+
+    .resetbox .button {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
+
     .resetbox a {
         text-decoration: none;
         font-size: calc((1em + 2vw) / 2);

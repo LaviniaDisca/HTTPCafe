@@ -12,16 +12,16 @@
 <div class="resetbox">
     <img src="<?php echo URL?>public/images/fixcil.png" class="avatar" alt="Image">
     <h1>Change password</h1>
-    <form action="">
-        <p>E-mail adress:</p>
-        <input type="email" name="email" placeholder="Enter e-mail here">
+    <form action="<?php echo URL?>Reset/change" method="post" enctype="multipart/form-data">
+        <p>E-mail address: </p>
+        <input type="email" name="email" placeholder="Enter e-mail here" required>
         <p>
-            New password :
+            New password:
         </p>
-        <input type="password" name="password" placeholder="Enter new password">
-        <p>Confirm password : </p>
-        <input type="password" name="password" placeholder="Confirm password">
-        <button type="submit" formaction="Login"> Reset password</button>
+        <input type="password" name="newPassword" placeholder="Enter new password" required>
+        <p>Confirm password: </p>
+        <input type="password" name="confirmPassword" placeholder="Confirm password" required>
+        <input type="submit" value="Reset password" class="button">
     </form>
 </div>
 </body>
