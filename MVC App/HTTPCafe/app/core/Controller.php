@@ -4,6 +4,8 @@ class Controller
 {
 
     public $db = null;
+    public $password_err = "";
+    public $email_err = "";
 
     public function __construct()
     {

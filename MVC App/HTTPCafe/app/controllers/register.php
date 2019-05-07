@@ -4,11 +4,29 @@ class Register extends Controller
 {
     public function index()
     {
-        $this->view('Register/index');
+        session_start();
+        if(isset($_SESSION['userID'])){
+            header('Location: ' . URL . 'Home');
+        }
+        if (isset($_SESSION['username_err'])) {
+            $data['name'] = $_SESSION['username_err'];
+        } else {
+            $data['name'] = '';
+        }
+        unset($_SESSION['username_err']);
+        if (isset($_SESSION['email_err'])) {
+            $data['email'] = $_SESSION['email_err'];
+        } else {
+            $data['email'] = '';
+        }
+        unset($_SESSION['email_err']);
+        $this->view('Register/index', $data);
     }
 
     public function addUser()
     {
+        $_SESSION['username_err'] = '';
+        $_SESSION['email_err'] = '';
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $email = $_POST['email'];
@@ -16,16 +34,23 @@ class Register extends Controller
             $user_model = $this->loadModel('UserModel');
             $used_user = $user_model->exists($username);
             $used_email = $user_model->checkEmail($email);
+            echo (string)($used_email);
             if ($used_user) {
-                //some error message in javascript or idk
+                session_start();
+                $_SESSION['username_err'] = 'Username already used!';
+                header('Location: ' . URL . 'Register');
             } else {
                 if ($used_email) {
-                    //email already used err
+                    session_start();
+                    $_SESSION['email_err'] = 'Email already used!';
+                    header('Location: ' . URL . 'Register');
                 } else {
                     $user_model->insert($username, $email, $password);
+                    unset($_SESSION['username_err']);
+                    unset($_SESSION['email_err']);
+                    header('Location: ' . URL . 'Login'); // redirect
                 }
             }
-            header('Location: ' . URL . 'Login'); // redirect
         }
     }
 }

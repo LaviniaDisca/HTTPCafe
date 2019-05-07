@@ -65,15 +65,13 @@ class UserModel
 
     public function checkEmail($email)
     {
-        $sql = " SELECT count(*) from users where email = '" . $email . "' ";
+        $sql = " SELECT * from users where email = '" . $email . "' ";
         $query = $this->db->prepare($sql);
         $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        if ($result > 1) {
-            return false;
-        }
-        else
+        if ($query->rowCount() > 0) {
             return true;
+        } else
+            return false;
     }
 
     public function getUsername($userID)

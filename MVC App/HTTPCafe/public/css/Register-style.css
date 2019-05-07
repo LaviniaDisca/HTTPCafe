@@ -24,8 +24,7 @@ body {
 
 .avatar {
     width: 6em;
-    height: 6em;
-    ;
+    height: 6em;;
     border-radius: 20em;
     position: absolute;
     top: -2em;
@@ -89,12 +88,18 @@ h1 {
     color: mediumseagreen;
 }
 
+.registerbox span {
+    font-size: 0.7em;
+    color: red;
+}
+
 @media screen and (max-width: 600px) {
     .registerbox {
         width: 18em;
         height: 21em;
         padding: 3em 2em;
     }
+
     .avatar {
         width: 4em;
         height: 4em;
@@ -102,25 +107,36 @@ h1 {
         top: -2em;
         left: 7em;
     }
+
     h1 {
         font-size: 1.4em;
     }
+
     .registerbox p {
         font-size: 0.8em;
     }
+
     .registerbox input {
         font-size: 0.8em;
     }
+
     .registerbox input[type="text"], input[type="password"], input[type="email"] {
         height: 1.5em;
         color: #fff;
         font-size: 0.8em;
     }
+
     .registerbox .button {
         height: 1.5em;
         color: #fff;
         font-size: 1em;
     }
+
+    .registerbox span {
+        font-size: 0.6em;
+        color: red;
+    }
+
     .registerbox a {
         text-decoration: none;
         font-size: 0.8em;
@@ -135,27 +151,38 @@ h1 {
         top: calc(-2em - 5vw);
         left: calc(11em + 10vw / 2);
     }
+
     .registerbox {
         width: calc(27em + 15vw);
         height: calc(31em + 17vw);
         padding: 5em 2em;
     }
+
     h1 {
         font-size: calc(2.5em + 1vw);
     }
+
     .registerbox p {
         font-size: calc(1.2em + 1vw);
     }
+
     .registerbox input[type="text"], input[type="password"], input[type="email"] {
         height: 1.5em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
+
     .registerbox .button {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
+
+    .registerbox span {
+        font-size: calc(0.9em + 1vw);
+        color: red;
+    }
+
     .registerbox a {
         text-decoration: none;
         font-size: calc((1em + 2vw) / 2);

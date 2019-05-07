@@ -84,6 +84,11 @@ h1 {
     color: darkgrey;
 }
 
+.resetbox span {
+    font-size: 0.7em;
+    color: red;
+}
+
 .resetbox a:hover {
     color: mediumseagreen;
 }
@@ -120,6 +125,11 @@ h1 {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
+    }
+
+    .resetbox span {
+        font-size: calc(0.9em + 1vw);
+        color: red;
     }
 
     .resetbox a {

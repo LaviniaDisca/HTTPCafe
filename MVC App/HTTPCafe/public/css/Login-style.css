@@ -49,6 +49,11 @@ h1 {
     margin-bottom: 1em;
 }
 
+.loginbox span {
+    font-size: 0.7em;
+    color: red;
+}
+
 .loginbox input[type="text"], input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
@@ -96,27 +101,38 @@ h1 {
         top: -2em;
         left: 7em;
     }
+
     .loginbox {
         width: 18em;
         height: 19em;
         padding: 3em 2em;
     }
+
     h1 {
         font-size: 1.4em;
     }
+
     .loginbox p {
         font-size: 0.8em;
     }
+
     .loginbox input[type="text"], input[type="password"] {
         height: 1.5em;
         color: #fff;
         font-size: 0.8em;
     }
+
+    .loginbox span {
+        font-size: 0.6em;
+        color: red;
+    }
+
     .loginbox .button {
         height: 1.5em;
         color: #fff;
         font-size: 1em;
     }
+
     .loginbox a {
         text-decoration: none;
         font-size: 0.8em;
@@ -131,27 +147,38 @@ h1 {
         top: calc(-2em - 5vw);
         left: calc(11em + 10vw / 2);
     }
+
     .loginbox {
         width: calc(27em + 15vw);
         height: calc(31em + 10vw);
         padding: 5em 2em;
     }
+
     h1 {
         font-size: calc(2.5em + 1vw);
     }
+
     .loginbox p {
         font-size: calc(1.2em + 1vw);
     }
+
     .loginbox input[type="text"], input[type="password"] {
         height: 1.5em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
+
+    .loginbox span {
+        font-size: calc(0.9em + 1vw);
+        color: red;
+    }
+
     .loginbox .button {
         height: 2em;
         color: #fff;
         font-size: calc(1.1em + 1vw);
     }
+
     .loginbox a {
         text-decoration: none;
         font-size: calc((1em + 2vw) / 2);
