@@ -20,6 +20,11 @@ nav ul {
     list-style: none;
 }
 
+nav {
+    z-index: 9999;
+    position: relative;
+}
+
 ul li {
     float: left;
     height: 2em;
@@ -34,26 +39,18 @@ ul li {
     ul li {
         font-size: calc(7px + 1vw);
     }
+    .title {
+        font-size: calc(12px + 2vw);
+    }
+    .catalog {
+        font-size: calc(7px + 1vw);
+    }
     .product {
         width: calc(240px + 5vw);
-    }
-    .product h1 {
-        font-size: calc(10px + 1vw);
+        height: calc(160px + 5vw);
     }
     .product img {
         width: 100%;
-        height: calc(160px + 5vw);
-    }
-    .overlay {
-        top: calc((13px + 1vw) * 2);
-        font-size: calc(13px + 1vw);
-    }
-    section h3:hover .overlay {
-        width: calc(240px + 5vw + 2em);
-        left: calc(100% - 240px - 5vw - 2em);
-    }
-    .slogan h1, .slogan h2 {
-        font-size: calc(13px + 1vw);
     }
 }
 
@@ -61,27 +58,18 @@ ul li {
     ul li {
         font-size: calc(10px + 1vw);
     }
+    .title {
+        font-size: calc(12px + 2vw);
+    }
+    .catalog {
+        font-size: calc(10px + 1vw);
+    }
     .product {
         width: 240px;
-        left: calc(50% - 120px);
-    }
-    .product h1 {
-        font-size: calc(10px + 1vw);
+        height: 160px;
     }
     .product img {
         width: 100%;
-        height: 160px;
-    }
-    .overlay {
-        top: calc((10px + 1vw) * 2);
-        font-size: calc(10px + 1vw);
-    }
-    section h3:hover .overlay {
-        width: calc(240px + 5em);
-        left: calc(100% - 240px - 5em);
-    }
-    .slogan h1, .slogan h2 {
-        font-size: calc(10px + 1vw);
     }
 }
 
@@ -94,27 +82,18 @@ ul li {
         height: 3em;
         font-size: calc(18px + 2vw);
     }
+    .title {
+        font-size: calc(15px + 2vw);
+    }
+    .catalog {
+        font-size: calc(15px + 2vw);
+    }
     .product {
         width: 210px;
-        left: calc(50% - 105px);
-    }
-    .product h1 {
-        font-size: calc(10px + 1vw);
+        height: 140px;
     }
     .product img {
         width: 100%;
-        height: 140px;
-    }
-    .overlay {
-        top: calc((18px + 2vw) * 3);
-        font-size: calc(10px + 1vw);
-    }
-    section h3:hover .overlay {
-        width: calc(210px + 5em);
-        left: calc(100% - 210px - 5em);
-    }
-    .slogan h1, .slogan h2 {
-        font-size: calc(14px + 1vw);
     }
 }
 
@@ -128,8 +107,6 @@ ul li a:hover {
     background-color: white;
     color: black;
 }
-
-/*placeholder*/
 
 .logo:hover {
     background-color: rgba(0, 0, 0, 0.5);
@@ -146,94 +123,33 @@ ul li:hover ul li {
 }
 
 body {
-    min-height: 100vh;
-    background-image: url('../images/home-background.gif');
+    background-image: url('../images/trial.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
+    background-size: cover;
 }
 
-section {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2vw;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 2vw;
-}
-
-.slogan {
-    grid-area: 3/1/span 2/span 2;
-}
-
-.slogan h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 900;
-    color: rgb(221, 205, 195);
-    display: block;
-    text-shadow: 4px 4px 10px #111;
-}
-
-.slogan h2 {
-    font-family: Cormorant Garamond;
-    color: white;
-    font-weight: 200;
-    font-style: italic;
-    text-shadow: 2px 2px 8px #111;
-}
-
-section h3 {
-    grid-area: 3/6/span 1/span 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.arrow {
-    display: table;
-    width: 100%;
-    height: 100%;
-}
-
-.arrow p {
-    display: table-cell;
+.title {
+    color: #37987A;
     text-align: center;
-    vertical-align: middle;
-    color: white;
+    height: 2em;
+    line-height: 3em;
+    padding: 1em;
+    font-family: 'Snell Roundhand', cursive;
+    font-style: italic;
 }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 100%;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    width: 0;
-    height: 90vh;
-    transition: .5s ease;
-}
-
-section h3:hover {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: rgba(0, 0, 0, 0);
-}
-
-.item-of-the-day {
-    color: white;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
+.catalog {
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1000;
+    margin-bottom:2em;
 }
 
 .product {
-    position: absolute;
-    top: 15%;
+    padding: 10px;
     border: 3px solid rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -252,7 +168,7 @@ section h3:hover {
 }
 
 .product .price {
-    color: green;
+    color: #37987A;
     padding: 2px;
 }
 
@@ -283,7 +199,7 @@ section h3:hover {
 }
 
 .button:hover {
-    background-color: #37987A;
+    background-color: green;
 }
 
 .button:hover .button-text {

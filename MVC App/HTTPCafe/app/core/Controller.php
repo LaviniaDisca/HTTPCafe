@@ -35,6 +35,7 @@ class Controller
 
     public function view($view, $data = [])
     {
+        echo $_SERVER['HTTP_REFERER'];
         require_once 'app/views/' . $view . '.php';
     }
 
