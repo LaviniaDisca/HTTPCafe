@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>HTTP Cafe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="<?php echo URL ?>public/css/style.css">
+    <link rel="stylesheet" href="<?php echo URL ?>public/css/review-style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
@@ -80,31 +80,39 @@
 
 <main>
     <p class="title">
-        Book a table
+        Leave a review
     </p>
-
-    <div class="catalog">
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
+    <div class="reviews">
+        <div class="review">
+            User Dr. Strange said :
+            <div class="text">
+                Good stuff
+            </div>
         </div>
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
+        <div class="review">
+            User Dr. Strange said :
+            <div class="text">
+                Good stuff
+            </div>
         </div>
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
+        <div class="review">
+            User Dr. Strange said :
+            <div class="text">
+                Good stuff
+            </div>
         </div>
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
+        <div class="review">
+            User Dr. Strange said :
+            <div class="text">
+                Good stuff
+            </div>
         </div>
+        <form action="index.php" method="post">
+            <input type="text" name="review" placeholder="Enter your review" required>
+            <input type="submit" value="Post Review" class="button">
+        </form>
     </div>
+
 </main>
 </body>
 

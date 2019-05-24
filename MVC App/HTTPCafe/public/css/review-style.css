@@ -1,0 +1,128 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+* {
+    text-decoration: none;
+}
+
+header {
+    font-family: Arial;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav {
+    z-index: 9999;
+    position: relative;
+}
+
+ul li {
+    float: left;
+    height: 2em;
+    width: calc(20% - 2px);
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 2em;
+    text-align: center;
+    margin-right: 2px;
+}
+
+@media only screen and (min-width: 900px) {
+    ul li {
+        font-size: calc(7px + 1vw);
+    }
+    .title, .review {
+        font-size: calc(12px + 2vw);
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    ul li {
+        font-size: calc(10px + 1vw);
+    }
+    .title, .review {
+        font-size: calc(12px + 2vw);
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .nav-option {
+        display: none;
+    }
+    ul li {
+        line-height: 3em;
+        height: 3em;
+        font-size: calc(18px + 2vw);
+    }
+    .title,.review {
+        font-size: calc(15px + 2vw);
+    }
+}
+
+ul li a {
+    color: white;
+    display: block;
+    user-select: none;
+}
+
+ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+ul li ul li {
+    display: none;
+    width: 100%;
+}
+
+ul li:hover ul li {
+    display: block;
+}
+
+body {
+    background-image: url('../images/wall.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    color: midnightblue;
+    text-align: center;
+    height: 2em;
+    line-height: 3em;
+    padding: 1em;
+    font-family: 'Snell Roundhand', cursive;
+    font-style: italic;
+}
+
+
+.reviews
+{
+    display:flex;
+    flex-direction: column;
+}
+
+input
+{
+    height:3em;
+    width:80vw;
+    margin-left: 10vw;
+    margin-top:20px;
+}
+
+.review{
+    flex :1;
+    align-self: center;
+    color: white;
+    background-color:rgba(0,0,0,0.5);
+    margin:20px;
+}
