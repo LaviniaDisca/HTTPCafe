@@ -77,34 +77,11 @@
     </nav>
 </header>
 
-<
 <main>
     <p class="title">
         Book a table
     </p>
-
-    <div class="catalog">
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
-        </div>
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
-        </div>
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
-        </div>
-        <div class="product">
-            <button class="button">
-                <span class="button-text">Book</span>
-            </button>
-        </div>
-    </div>
+    <?php echo $data['catalog']; ?>
 </main>
 </body>
 

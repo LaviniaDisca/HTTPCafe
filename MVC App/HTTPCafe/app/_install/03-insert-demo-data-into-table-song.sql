@@ -53,3 +53,5 @@ INSERT INTO `products` (`id`, `type`, `name`, `photo_path`, `price`, `stock`) VA
 ('38', 'merch', 'The shirt of truth', 'falseShirt.jpg', '20.99', '30'),
 ('39', 'merch', 'Code Mug', 'cofcode.jpg', '14.99', '22'),
 ('40', 'merch', 'Code Shirt', 'cofcodeshirt.jpg', '20.99', '16');
+
+INSERT INTO `tables` (`id`, `seats`) VALUES (NULL, '4'), (NULL, '2'), (NULL, '5'), (NULL, '3');
