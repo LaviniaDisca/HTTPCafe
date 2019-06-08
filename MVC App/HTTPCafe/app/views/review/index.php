@@ -57,32 +57,9 @@
         Leave a review
     </p>
     <div class="reviews">
-        <div class="review">
-            User Dr. Strange said :
-            <div class="text">
-                Good stuff
-            </div>
-        </div>
-        <div class="review">
-            User Dr. Strange said :
-            <div class="text">
-                Good stuff
-            </div>
-        </div>
-        <div class="review">
-            User Dr. Strange said :
-            <div class="text">
-                Good stuff
-            </div>
-        </div>
-        <div class="review">
-            User Dr. Strange said :
-            <div class="text">
-                Good stuff
-            </div>
-        </div>
-        <form action="index.php" method="post">
-            <input type="text" name="review" placeholder="Enter your review" required>
+        <?php echo $data['reviews'];?>
+        <form action="<?php echo URL;?>Review/add" method="post">
+            <input type="text" name="review" placeholder="Enter your review" maxlength="30" required>
             <input type="submit" value="Post Review" class="button">
         </form>
     </div>

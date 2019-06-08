@@ -35,6 +35,12 @@ CREATE TABLE `httpcafe`.`table_users`
   `table_id` int,
   `user_id` int
 );
+CREATE TABLE `httpcafe`.`reviews`
+(
+  `id` int PRIMARY KEY AUTO_INCREMENT,
+  `user_id` int,
+  `review` varchar(255)
+);
 
 
 ALTER TABLE `httpcafe`.`carts` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
@@ -45,3 +51,4 @@ ALTER TABLE `httpcafe`.`table_users` ADD FOREIGN KEY (`table_id`) REFERENCES `ht
 
 ALTER TABLE `httpcafe`.`table_users` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
 
+ALTER TABLE `httpcafe`.`reviews` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
