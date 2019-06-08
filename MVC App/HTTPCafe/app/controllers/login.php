@@ -40,6 +40,8 @@ class Login extends Controller
                     unset($_SESSION['[password_err']);
                     $_SESSION['userID'] = $result['id'];
                     if (isset($_SESSION['userID'])) {
+                        $activity = date('Y-m-d H:i:s', time());
+                        $user_model->updateActivity($activity, $_SESSION['userID']);
                         header('Location: ' . URL . 'Home');
                     } else {
                         header('Location: ' . URL . 'Login');

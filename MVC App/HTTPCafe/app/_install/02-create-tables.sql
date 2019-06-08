@@ -20,7 +20,8 @@ CREATE TABLE `httpcafe`.`users`
   `id` int PRIMARY KEY AUTO_INCREMENT,
   `username` varchar(255) UNIQUE,
   `email` varchar(255) UNIQUE,
-  `password` varchar(255)
+  `password` varchar(255),
+  `last_activity` varchar(50)
 );
 
 CREATE TABLE `httpcafe`.`tables`

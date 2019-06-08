@@ -45,10 +45,11 @@ class Register extends Controller
                     $_SESSION['email_err'] = 'Email already used!';
                     header('Location: ' . URL . 'Register');
                 } else {
-                    $user_model->insert($username, $email, $password);
+                    $last_activity = date('Y-m-d H:i:s', time());
+                    $user_model->insert($username, $email, $password, $last_activity);
                     unset($_SESSION['username_err']);
                     unset($_SESSION['email_err']);
-                    header('Location: ' . URL . 'Login'); // redirect
+                    header('Location: ' . URL . 'Login');
                 }
             }
         }

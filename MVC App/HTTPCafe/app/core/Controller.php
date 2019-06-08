@@ -49,6 +49,21 @@ class Controller
         return $result['username'];
     }
 
+    public function checkTime()
+    {
+        $user_model = $this->loadModel('UserModel');
+        $last_activity = $user_model->getLastActivity($_SESSION['userID']);
+        $dteStart = new DateTime($last_activity[0]->last_activity);
+        $dteEnd = new DateTime('NOW');
+        $dteDiff = $dteStart->diff($dteEnd);
+        if ($dteDiff->y > 0 || $dteDiff->m > 0 || $dteDiff->d > 0 || $dteDiff->h > 0 || intval($dteDiff->i) >=30) {
+            $model = $this->loadModel('TableModel');
+            $model->removeTableUser($_SESSION['userID']);
+            unset($_SESSION['userID']);
+            header('Location: ' . URL . 'Login');
+        }
+    }
+
     public function isAllowed($className, $referer)
     {
         switch ($className) {

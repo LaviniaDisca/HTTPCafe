@@ -32,19 +32,27 @@ class UserModel
         else return false;
     }
 
-    public function insert($username, $email, $password)
+    public function insert($username, $email, $password, $last_activity)
     {
-        $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+        $sql = "INSERT INTO users (username, email, password, last_activity) VALUES (:username, :email, :password, :last_activity)";
         $query = $this->db->prepare($sql);
-        $query->execute(array(":username" => $username, ":email" => $email, ":password" => $password));
-        /*//get the created id
-        $sql = "SELECT id FROM users where username='" . $username . "'";
+        $query->execute(array(":username" => $username, ":email" => $email, ":password" => $password, ":last_activity" => $last_activity));
+    }
+
+    public function updateActivity($newAct, $userID)
+    {
+        $sql = " UPDATE users set last_activity = '" . $newAct . "' where id = '" . $userID . "' ";
         $query = $this->db->prepare($sql);
         $query->execute();
-        $result = $query->fetch(PDO::FETCH_ASSOC);
-        $sql = "INSERT INTO carts (user_id, email, password) VALUES (:username, :email, :password)";
+    }
+
+    public function getLastActivity($userID)
+    {
+        $sql = "SELECT last_activity FROM users where id='" . $userID . "'";
         $query = $this->db->prepare($sql);
-        $query->execute(array(":username" => $username, ":email" => $email, ":password" => $password));*/
+        $query->execute();
+        $results = $query->fetchAll();
+        return $results;
     }
 
     public function updatePass($email, $password)
