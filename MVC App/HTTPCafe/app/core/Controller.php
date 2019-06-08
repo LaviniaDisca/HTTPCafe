@@ -44,6 +44,7 @@ class Controller
         if (!isset($_SESSION["userID"])) {
             header('Location: ' . URL . 'Login');
         }
+        $this->checkTime();
         $user_model = $this->loadModel('UserModel');
         $result = $user_model->getUsername($_SESSION["userID"]);
         return $result['username'];

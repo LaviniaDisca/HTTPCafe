@@ -15,16 +15,16 @@ class CartModel
         }
     }
 
-    public function addProduct($product)
+    public function addProduct($product,$user)
     {
         $sql = "INSERT INTO carts (user_id, product_id, quantity) VALUES (:user_id, :product_id, :quantity)";
         $query = $this->db->prepare($sql);
-        $query->execute(array(":user_id" => $_SESSION["userID"], ":product_id" => $product, ":quantity" => 1));
+        $query->execute(array(":user_id" => $user, ":product_id" => $product, ":quantity" => 1));
     }
 
-    public function removeProduct($product)
+    public function removeProduct($product,$user)
     {
-        $sql="DELETE FROM carts where product_id='".$product."'";
+        $sql="DELETE FROM carts where product_id='".$product."' and user_id = ".$user;
         $query = $this->db->prepare($sql);
         $query->execute();
     }
@@ -35,6 +35,13 @@ class CartModel
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
+    }
+
+    public function clear($user)
+    {
+        $sql="DELETE FROM carts where user_id='".$user."'";
+        $query = $this->db->prepare($sql);
+        $query->execute();
     }
 }
 

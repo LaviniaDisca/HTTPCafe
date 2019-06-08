@@ -10,7 +10,6 @@ class Coffees extends Controller
         $catalog = $obj->getProductCatalog('coffee');
         $data['catalog'] = $catalog;
         $data['username'] = $this->getUsername();
-        $this->checkTime();
         $this->view('Coffees/index', $data);
     }
 }

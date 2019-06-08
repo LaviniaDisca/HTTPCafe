@@ -56,6 +56,9 @@
     </p>
 
     <?php echo $data['catalog']; ?>
+    <div class="wrapp">
+    <?php echo $data['order']; ?>
+    </div>
 
 </main>
 </body>

@@ -228,15 +228,9 @@ body {
     margin-bottom: 2em;
 }
 
-.order .button-text {
-    padding: 4px;
-}
 
 .order:hover {
     background-color: rgb(0, 138, 94);
-}
-
-.order:hover .button-text {
     color: white;
 }
 
@@ -253,4 +247,9 @@ nav > ul > li:last-child {
 nav > ul > li:nth-child(3) {
     display: block;
     float: left;
+}
+
+.wrapp
+{
+    text-align: center;
 }
