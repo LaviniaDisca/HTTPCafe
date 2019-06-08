@@ -43,6 +43,12 @@ ul li {
     .title, .review {
         font-size: calc(12px + 2vw);
     }
+
+    input[type="text"], .button {
+        height: 1.5em;
+        color: #fff;
+        font-size: calc(1em + 1vw);
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
@@ -52,6 +58,12 @@ ul li {
 
     .title, .review {
         font-size: calc(12px + 2vw);
+    }
+
+    input[type="text"], .button {
+        height: 1.5em;
+        color: #fff;
+        font-size: 1em;
     }
 }
 
@@ -68,6 +80,12 @@ ul li {
 
     .title, .review {
         font-size: calc(15px + 2vw);
+    }
+
+    input[type="text"], .button {
+        height: 1.5em;
+        color: #fff;
+        font-size: 0.8em;
     }
 }
 
@@ -115,7 +133,6 @@ body {
 }
 
 input {
-    height: 3em;
     width: 80vw;
     margin-left: 10vw;
     margin-top: 20px;
@@ -128,6 +145,27 @@ input {
     background-color: rgba(0, 0, 0, 0.5);
     margin: 20px;
 }
+
+::placeholder {
+    color: rgb(123, 213, 129);
+    text-align: center;
+}
+
+input[type="text"] {
+    border: 1px solid #fff;
+    background: transparent;
+    outline: none;
+}
+
+.button {
+    border: none;
+    outline: none;
+    width: 80vw;
+    background: teal;
+    border-radius: 2em;
+    margin-bottom: 1em;
+}
+
 
 nav ul li {
     display: none;
