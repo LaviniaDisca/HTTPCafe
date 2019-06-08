@@ -40,15 +40,19 @@ ul li {
     ul li {
         font-size: calc(7px + 1vw);
     }
+
     .title {
         font-size: calc(12px + 2vw);
     }
+
     .catalog {
         font-size: calc(7px + 1vw);
     }
+
     .product {
         width: calc(240px + 5vw);
     }
+
     .product img {
         width: 100%;
         height: calc(160px + 5vw);
@@ -59,15 +63,19 @@ ul li {
     ul li {
         font-size: calc(10px + 1vw);
     }
+
     .title {
         font-size: calc(12px + 2vw);
     }
+
     .catalog {
         font-size: calc(10px + 1vw);
     }
+
     .product {
         width: 240px;
     }
+
     .product img {
         width: 100%;
         height: 160px;
@@ -78,20 +86,25 @@ ul li {
     .nav-option {
         display: none;
     }
+
     ul li {
         line-height: 3em;
         height: 3em;
         font-size: calc(18px + 2vw);
     }
+
     .title {
         font-size: calc(15px + 2vw);
     }
+
     .catalog {
         font-size: calc(15px + 2vw);
     }
+
     .product {
         width: 210px;
     }
+
     .product img {
         width: 100%;
         height: 140px;
@@ -146,7 +159,7 @@ body {
     justify-content: space-around;
     position: relative;
     z-index: 1000;
-    margin-bottom:2em;
+    margin-bottom: 2em;
 }
 
 .product {
@@ -198,5 +211,20 @@ body {
 .button:hover {
     background-color: deeppink;
     border-color: deeppink;
-    color:white;
+    color: white;
+}
+
+
+nav ul li {
+    display: none;
+}
+
+nav > ul > li:last-child {
+    display: block;
+    float: right;
+}
+
+nav > ul > li:nth-child(3) {
+    display: block;
+    float: left;
 }

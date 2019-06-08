@@ -21,32 +21,10 @@
                     <span class="nav-icon"><i class="fas fa-home"></i></span>
                     <span class="nav-option">Home</span>
                 </a></li>
-            <li><a>
+            <li><a href="<?php echo URL?>Menu">
                     <span class="nav-icon"><i class="fab fa-elementor"></i></span>
                     <span class="nav-option">Menu</span>
                 </a>
-                <ul>
-                    <li><a>
-                            <span class="nav-icon">☕</span>
-                            <span class="nav-option">Coffees</span>
-                        </a></li>
-                    <li><a href="<?php echo URL?>Freshes">
-                            <span class="nav-icon">🍹</span>
-                            <span class="nav-option">Freshes</span>
-                        </a></li>
-                    <li><a href="<?php echo URL?>MiniCakes">
-                            <span class="nav-icon">🍰</span>
-                            <span class="nav-option">Mini-Cakes</span>
-                        </a></li>
-                    <li><a href="<?php echo URL?>Cookies">
-                            <span class="nav-icon">🍪</span>
-                            <span class="nav-option">Cookies</span>
-                        </a></li>
-                    <li><a href="<?php echo URL?>Pretzels">
-                            <span class="nav-icon">🥐</span>
-                            <span class="nav-option">Pretzels</span>
-                        </a></li>
-                </ul>
             </li>
             <li><a href="<?php echo URL?>Merchandise">
                     <span class="nav-icon"><i class="fas fa-gifts"></i></span>
@@ -57,10 +35,6 @@
                     <span class="nav-option"><?php echo $data['username']; ?></span>
                 </a>
                 <ul>
-                    <li><a href="<?php echo URL?>Cart">
-                            <span class="nav-icon"><i class="fas fa-shopping-cart"></i></span>
-                            <span class="nav-option">Cart</span>
-                        </a></li>
                     <li><a href="<?php echo URL?>Reset">
                             <span class="nav-icon"><i class="fas fa-key"></i></span>
                             <span class="nav-option">Change password</span>

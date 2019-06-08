@@ -19,11 +19,14 @@ class ProductsModel
         $sql = "SELECT * FROM products where type='". $type . "'";
         $query = $this->db->prepare($sql);
         $query->execute();
+        return $query->fetchAll();
+    }
 
-        // fetchAll() is the PDO method that gets all result rows, here in object-style because we defined this in
-        // libs/controller.php! If you prefer to get an associative array as the result, then do
-        // $query->fetchAll(PDO::FETCH_ASSOC); or change libs/controller.php's PDO options to
-        // $options = array(PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ...
+    public function getProduct($type)
+    {
+        $sql = "SELECT * FROM products where type='". $type . "' order by rand() limit 1";
+        $query = $this->db->prepare($sql);
+        $query->execute();
         return $query->fetchAll();
     }
 }

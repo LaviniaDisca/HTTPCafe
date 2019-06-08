@@ -39,6 +39,7 @@ ul li {
     ul li {
         font-size: calc(7px + 1vw);
     }
+
     .title, .review {
         font-size: calc(12px + 2vw);
     }
@@ -48,6 +49,7 @@ ul li {
     ul li {
         font-size: calc(10px + 1vw);
     }
+
     .title, .review {
         font-size: calc(12px + 2vw);
     }
@@ -57,12 +59,14 @@ ul li {
     .nav-option {
         display: none;
     }
+
     ul li {
         line-height: 3em;
         height: 3em;
         font-size: calc(18px + 2vw);
     }
-    .title,.review {
+
+    .title, .review {
         font-size: calc(15px + 2vw);
     }
 }
@@ -105,24 +109,36 @@ body {
 }
 
 
-.reviews
-{
-    display:flex;
+.reviews {
+    display: flex;
     flex-direction: column;
 }
 
-input
-{
-    height:3em;
-    width:80vw;
+input {
+    height: 3em;
+    width: 80vw;
     margin-left: 10vw;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-.review{
-    flex :1;
+.review {
+    flex: 1;
     align-self: center;
     color: white;
-    background-color:rgba(0,0,0,0.5);
-    margin:20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+}
+
+nav ul li {
+    display: none;
+}
+
+nav > ul > li:last-child {
+    display: block;
+    float: right;
+}
+
+nav > ul > li:nth-child(3) {
+    display: block;
+    float: left;
 }

@@ -62,6 +62,8 @@ class Login extends Controller
     public function logOut()
     {
         session_start();
+        $model = $this->loadModel('TableModel');
+        $model->removeTableUser($_SESSION['userID']);
         unset($_SESSION['userID']);
         header('Location: ' . URL . 'Login');
     }

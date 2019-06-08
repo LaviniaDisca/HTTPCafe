@@ -48,4 +48,20 @@ class Controller
         $result = $user_model->getUsername($_SESSION["userID"]);
         return $result['username'];
     }
+
+    public function isAllowed($className, $referer)
+    {
+        switch ($className) {
+            case 'Coffees':
+                switch ($referer) {
+                    case 'home' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            default:
+                return true;
+        }
+    }
 }

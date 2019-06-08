@@ -22,17 +22,17 @@ class TableModel
         $query->execute(array(":table_id" => $tableID, ":user_id" => $userID));
     }
 
-    public function removeTableUser($product)
+    public function removeTableUser($userID)
     {
-        $sql = "DELETE FROM carts where product_id='" . $product . "'";
+        $sql = "DELETE FROM table_users where user_id=" . $userID;
         $query = $this->db->prepare($sql);
         $query->execute();
     }
 
     public function isFull($tableID)
     {
-        $sql = "SELECT * FROM table_users where table_id = '" . $tableID . "'";
-        $seats = "Select seats from tables where id = ". $tableID;
+        $sql = "SELECT * FROM table_users where table_id = " . $tableID;
+        $seats = "Select seats from tables where id = " . $tableID;
         $query2 = $this->db->prepare($seats);
         $query = $this->db->prepare($sql);
         $query->execute();
@@ -50,6 +50,17 @@ class TableModel
         $query = $this->db->prepare($sql);
         $query->execute();
         return $query->fetchAll();
+    }
+
+    public function checkUserSeated($userID)
+    {
+
+        $sql = "SELECT * FROM table_users where user_id =". $userID;
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        if($query->rowCount() >0)
+            return true;
+        return false;
     }
 }
 
