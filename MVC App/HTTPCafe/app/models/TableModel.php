@@ -54,7 +54,6 @@ class TableModel
 
     public function checkUserSeated($userID)
     {
-
         $sql = "SELECT * FROM table_users where user_id =". $userID;
         $query = $this->db->prepare($sql);
         $query->execute();

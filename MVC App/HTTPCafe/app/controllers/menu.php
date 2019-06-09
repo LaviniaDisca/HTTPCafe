@@ -4,7 +4,7 @@ class Menu extends Controller
 {
     public function index()
     {
-        //print_r(static::class);
+        $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
         $data['username'] = $this->getUsername();
         $catalog = '<div class="catalog">';
         $products_model = $this->loadModel('ProductsModel');
@@ -38,7 +38,6 @@ class Menu extends Controller
             $catalog = $catalog . '</div>';
         }
         $catalog = $catalog . '</div>';
-
         $data['catalog'] = $catalog;
         $this->view('menu/index', $data);
     }

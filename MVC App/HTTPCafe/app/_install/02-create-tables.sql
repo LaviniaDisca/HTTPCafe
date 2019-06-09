@@ -42,13 +42,19 @@ CREATE TABLE `httpcafe`.`reviews`
   `review` varchar(255)
 );
 
+CREATE TABLE `httpcafe`.`contability` ( `product_id` INT NOT NULL , `user_id` INT NOT NULL , `quantity` INT NOT NULL ) ENGINE = InnoDB;
+
 
 ALTER TABLE `httpcafe`.`carts` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
 
 ALTER TABLE `httpcafe`.`carts` ADD FOREIGN KEY (`product_id`) REFERENCES `httpcafe`.`products` (`id`);
 
+ALTER TABLE `httpcafe`.`contability` ADD FOREIGN KEY (`product_id`) REFERENCES `httpcafe`.`products` (`id`);
+
 ALTER TABLE `httpcafe`.`table_users` ADD FOREIGN KEY (`table_id`) REFERENCES `httpcafe`.`tables` (`id`);
 
 ALTER TABLE `httpcafe`.`table_users` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
+
+ALTER TABLE `httpcafe`.`contability` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);
 
 ALTER TABLE `httpcafe`.`reviews` ADD FOREIGN KEY (`user_id`) REFERENCES `httpcafe`.`users` (`id`);

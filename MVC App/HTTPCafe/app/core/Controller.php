@@ -38,13 +38,15 @@ class Controller
         require_once 'app/views/' . $view . '.php';
     }
 
-    public function getUsername()
+    public function getUsername($checker = 'nothing')
     {
         session_start();
         if (!isset($_SESSION["userID"])) {
             header('Location: ' . URL . 'Login');
         }
         $this->checkTime();
+        if (!$this->loadModel('TableModel')->checkUserSeated($_SESSION["userID"]) && $checker == 'nothing')
+            header('Location: ' . URL . 'Home');
         $user_model = $this->loadModel('UserModel');
         $result = $user_model->getUsername($_SESSION["userID"]);
         return $result['username'];
@@ -57,7 +59,7 @@ class Controller
         $dteStart = new DateTime($last_activity[0]->last_activity);
         $dteEnd = new DateTime('NOW');
         $dteDiff = $dteStart->diff($dteEnd);
-        if ($dteDiff->y > 0 || $dteDiff->m > 0 || $dteDiff->d > 0 || $dteDiff->h > 0 || intval($dteDiff->i) >=30) {
+        if ($dteDiff->y > 0 || $dteDiff->m > 0 || $dteDiff->d > 0 || $dteDiff->h > 0 || intval($dteDiff->i) >= 30) {
             $model = $this->loadModel('TableModel');
             $model->removeTableUser($_SESSION['userID']);
             unset($_SESSION['userID']);
@@ -65,12 +67,117 @@ class Controller
         }
     }
 
+    public function showForbidden($class, $referer)
+    {
+        if (!$this->isAllowed($class, $referer)) {
+            header('Location: ' . URL . 'Reset'); // redirect
+        }
+    }
+
     public function isAllowed($className, $referer)
     {
         switch ($className) {
+            case 'Home':
+                switch ($referer) {
+                    case URL . 'Login' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Menu':
+                switch ($referer) {
+                    case URL . 'Home' :
+                        return true;
+                    case URL . 'Coffees' :
+                        return true;
+                    case URL . 'Cookies' :
+                        return true;
+                    case URL . 'Freshes' :
+                        return true;
+                    case URL . 'Minicakes' :
+                        return true;
+                    case URL . 'Merchandise' :
+                        return true;
+                    case URL . 'Pretzels' :
+                        return true;
+                    case URL . 'Cart' :
+                        return true;
+                    case URL . 'Review' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
             case 'Coffees':
                 switch ($referer) {
-                    case 'home' :
+                    case URL . 'Menu' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Cookies':
+                switch ($referer) {
+                    case URL . 'Menu' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Minicakes':
+                switch ($referer) {
+                    case URL . 'Menu' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Pretzels':
+                switch ($referer) {
+                    case URL . 'Menu' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Freshes':
+                switch ($referer) {
+                    case URL . 'Menu' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Merchandise':
+                switch ($referer) {
+                    case URL . 'Menu' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Review':
+                switch ($referer) {
+                    case URL . 'Cart' :
+                        return true;
+                    default:
+                        return false;
+                }
+                break;
+            case 'Cart':
+                switch ($referer) {
+                    case URL . 'Coffees' :
+                        return true;
+                    case URL . 'Cookies' :
+                        return true;
+                    case URL . 'Freshes' :
+                        return true;
+                    case URL . 'Minicakes' :
+                        return true;
+                    case URL . 'Merchandise' :
+                        return true;
+                    case URL . 'Pretzels' :
                         return true;
                     default:
                         return false;

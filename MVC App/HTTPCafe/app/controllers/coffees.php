@@ -6,6 +6,7 @@ class Coffees extends Controller
 {
     public function index()
     {
+        $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
         $obj = new Product();
         $catalog = $obj->getProductCatalog('coffee');
         $data['catalog'] = $catalog;

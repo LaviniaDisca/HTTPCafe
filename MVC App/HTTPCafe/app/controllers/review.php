@@ -5,6 +5,7 @@ class Review extends Controller
 {
     public function index()
     {
+        $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
         $data['username'] = $this->getUsername();
         $review = $this->loadModel('ReviewModel');
         $reviews = $review->getReviews();

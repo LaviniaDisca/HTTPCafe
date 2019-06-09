@@ -4,7 +4,8 @@ class Home extends Controller
 {
     public function index()
     {
-        $data['username'] = $this->getUsername();
+        $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
+        $data['username'] = $this->getUsername('a');
         $table_model = $this->loadModel('TableModel');
         if($table_model->checkUserSeated($_SESSION['userID']))
             header('Location: ' . URL . 'Menu');

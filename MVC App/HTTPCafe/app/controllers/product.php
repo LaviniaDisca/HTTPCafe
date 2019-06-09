@@ -18,7 +18,9 @@ class Product extends Controller
             $catalog = $catalog . '<p class="price">' . $product->price . ' lei' . '</p>';
             $catalog = $catalog . '<form method="post" action="Cart/addToCart">';
             $catalog = $catalog . '<input type="hidden" name="productId" value="' . $product->id . '">';
-            $catalog = $catalog . '<input type="submit" value="Add Product" class="button">';
+            if ($product->stock > 0)
+                $catalog = $catalog . '<input type="submit" value="Add Product" class="button">';
+            else $catalog = $catalog . '<input type="submit" value="Empty Stock" class="button" disabled>';
             $catalog = $catalog . '</form>';
             $catalog = $catalog . '</div>';
         }

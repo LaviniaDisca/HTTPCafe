@@ -36,6 +36,10 @@
                     <span class="nav-option"><?php echo $data['username']; ?></span>
                 </a>
                 <ul>
+                    <li><a href="<?php echo URL ?>Cart">
+                            <span class="nav-icon"><i class="fas fa-shopping-cart"></i></span>
+                            <span class="nav-option">Cart</span>
+                        </a></li>
                     <li><a href="<?php echo URL ?>Reset">
                             <span class="nav-icon"><i class="fas fa-key"></i></span>
                             <span class="nav-option">Change password</span>
