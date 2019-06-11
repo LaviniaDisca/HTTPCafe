@@ -70,7 +70,7 @@ class Controller
     public function showForbidden($class, $referer)
     {
         if (!$this->isAllowed($class, $referer)) {
-            header('Location: ' . URL . 'Reset'); // redirect
+            header('Location: ' . URL . 'Forbidden'); // 403
         }
     }
 
@@ -159,6 +159,8 @@ class Controller
                 break;
             case 'Review':
                 switch ($referer) {
+                    case URL . 'Review' :
+                        return true;
                     case URL . 'Cart' :
                         return true;
                     default:

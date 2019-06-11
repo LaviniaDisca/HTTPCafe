@@ -5,7 +5,8 @@ class Login extends Controller
     public function index()
     {
         session_start();
-        $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
+        if(isset($_SERVER['HTTP_REFERER']))
+            $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
         if(isset($_SESSION['userID'])){
             header('Location: ' . URL . 'Home');
         }
