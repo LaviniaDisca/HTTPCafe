@@ -42,11 +42,11 @@ class Controller
     {
         session_start();
         if (!isset($_SESSION["userID"])) {
-            header('Location: ' . URL . 'Login');
+            $this->forbid();
         }
         $this->checkTime();
         if (!$this->loadModel('TableModel')->checkUserSeated($_SESSION["userID"]) && $checker == 'nothing')
-            header('Location: ' . URL . 'Home');
+            $this->forbid();
         $user_model = $this->loadModel('UserModel');
         $result = $user_model->getUsername($_SESSION["userID"]);
         return $result['username'];
@@ -67,10 +67,15 @@ class Controller
         }
     }
 
+    public function forbid()
+    {
+        header('Location: ' . URL . 'Forbidden'); // 403
+    }
+
     public function showForbidden($class, $referer)
     {
         if (!$this->isAllowed($class, $referer)) {
-            header('Location: ' . URL . 'Forbidden'); // 403
+            $this->forbid();
         }
     }
 

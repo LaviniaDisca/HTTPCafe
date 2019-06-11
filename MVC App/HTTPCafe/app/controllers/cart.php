@@ -49,7 +49,7 @@ class Cart extends Controller
     {
         session_start();
         if (!isset($_SESSION['userID']))
-            header('Location: ' . URL . 'Login');
+            $this->forbid();
         if (isset($_POST['productId'])) {
             $cart_model = $this->loadModel('CartModel');
             $cart_model->removeProduct($_POST['productId'], $_SESSION['userID']);
@@ -61,9 +61,9 @@ class Cart extends Controller
     {
         session_start();
         if (!isset($_SESSION['userID']))
-            header('Location: ' . URL . 'Login');
+            $this->forbid();
         if (!isset($_POST['productId0']))
-            header('Location: ' . URL . 'Home');
+            $this->forbid();
         $product = null;
         foreach ($_POST as $item) {
             if ($product) {

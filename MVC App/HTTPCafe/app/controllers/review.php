@@ -25,7 +25,7 @@ class Review extends Controller
     {
         session_start();
         if (!isset($_SESSION['userID']) || !isset($_POST['review']))
-            header('Location: ' . URL . 'Login');
+            $this->forbid();
         $review = $this->loadModel('ReviewModel');
         $review->add($_SESSION['userID'],$_POST['review'],date('d/m/Y h:i:s',time()));
         header('Location: ' . URL . 'Review');

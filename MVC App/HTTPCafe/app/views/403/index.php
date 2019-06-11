@@ -10,7 +10,7 @@
 
 <body>
 <div class="link">
-    <a href="<?php echo URL; ?>Home">
+    <a href="<?php echo URL; ?>Login">
         Go home
     </a>
 </div>

@@ -7,7 +7,7 @@ class Register extends Controller
         session_start();
         $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
         if(isset($_SESSION['userID'])){
-            header('Location: ' . URL . 'Home');
+            $this->forbid();
         }
         if (isset($_SESSION['username_err'])) {
             $data['name'] = $_SESSION['username_err'];
