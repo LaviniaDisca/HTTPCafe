@@ -19,10 +19,10 @@
         <p>
             New password:
         </p>
-        <input type="password" name="newPassword" placeholder="Enter new password" required>
+        <input type="password" name="newPassword" placeholder="Enter new password" minlength="6" required>
         <span class="help-block"><?php echo $data['pass']; ?></span>
         <p>Confirm password: </p>
-        <input type="password" name="confirmPassword" placeholder="Confirm password" required>
+        <input type="password" name="confirmPassword" placeholder="Confirm password" minlength="6" required>
         <input type="submit" value="Reset password" class="button">
     </form>
 </div>

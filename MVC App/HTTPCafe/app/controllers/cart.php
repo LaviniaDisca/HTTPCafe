@@ -16,7 +16,7 @@ class Cart extends Controller
             $catalog = $catalog . '<div class="product">';
             $catalog = $catalog . '<img src="public/images/' . $product->photo_path . '" alt="' . $product->name . '">';
             $catalog = $catalog . '<h1>' . $product->name . '(x' . $product->quantity . ')</h1>';
-            $catalog = $catalog . '<p class="price">' . $product->price . ' lei' . '</p>';
+            $catalog = $catalog . '<p class="price">' . $product->price * $product->quantity . ' lei' . '</p>';
             $catalog = $catalog . '<form method="post" action="Cart/removeFromCart" id="removeForm' . $counter . '">';
             $catalog = $catalog . '<input type="hidden" name="productId" value="' . $product->id . '">';
             $catalog = $catalog . '</form>';

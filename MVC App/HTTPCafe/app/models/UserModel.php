@@ -64,9 +64,9 @@ class UserModel
 
     public function getInfo($username)
     {
-        $sql = "SELECT * FROM users where username='" . $username . "'";
+        $sql = "SELECT * FROM users where username=:username";
         $query = $this->db->prepare($sql);
-        $query->execute();
+        $query->execute(array(":username" => $username));
         $results = $query->fetch(PDO::FETCH_ASSOC);
         return $results;
     }

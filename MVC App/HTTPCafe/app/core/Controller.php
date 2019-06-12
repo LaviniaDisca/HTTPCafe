@@ -186,6 +186,8 @@ class Controller
                         return true;
                     case URL . 'Pretzels' :
                         return true;
+                    case URL . 'Cart' :
+                        return true;
                     default:
                         return false;
                 }

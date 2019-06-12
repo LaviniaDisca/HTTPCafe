@@ -16,10 +16,10 @@
             <p>
                 Username:
             </p>
-            <input type="text" name="username" placeholder="Enter username" required>
+            <input type="text" name="username" placeholder="Enter username" maxlength="10" required>
             <span class="help-block"><?php echo $data['name']; ?></span>
             <p>Password: </p>
-            <input type="password" name="password" placeholder="Enter password" required>
+            <input type="password" name="password" placeholder="Enter password" minlength="6" required>
             <span class="help-block"><?php echo $data['pass']; ?></span>
         <input type="submit" value="Log In" class="button">
         <a href="<?php echo URL ?>Register">Don't have an account? Sign up!</a>

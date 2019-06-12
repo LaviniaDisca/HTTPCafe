@@ -16,13 +16,13 @@
         <p>
             Username:
         </p>
-        <input type="text" name="username" placeholder="Enter username" required>
+        <input type="text" name="username" placeholder="Enter username" maxlength="10" required>
         <span class="help-block"><?php echo $data['name']; ?></span>
         <p>Email: </p>
         <input type="email" name="email" placeholder="Enter e-mail here" required>
         <span class="help-block"><?php echo $data['email']; ?></span>
         <p>Password: </p>
-        <input type="password" name="password" placeholder="Enter password" required>
+        <input type="password" name="password" placeholder="Enter password" minlength="6" required>
         <input type="submit" value="Register" class="button">
         <a href="<?php echo URL ?>Login">Already have an account? Login!</a>
     </form>
