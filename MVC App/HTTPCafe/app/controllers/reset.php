@@ -5,8 +5,8 @@ class Reset extends Controller
     public function index()
     {
         session_start();
-        $this->showForbidden(static::class,$_SERVER['HTTP_REFERER']);
-        if(!isset($_SESSION['userID'])){
+        $this->showForbidden(static::class, $_SERVER['HTTP_REFERER']);
+        if (!isset($_SESSION['userID'])) {
             $this->forbid();
         }
         if (isset($_SESSION['email_err'])) {
@@ -44,6 +44,9 @@ class Reset extends Controller
                         unset($_SESSION['email_err']);
                         unset($_SESSION['password_err']);
                         $user_model->updatePass($email, $newPass);
+                        $model = $this->loadModel('TableModel');
+                        $model->removeTableUser($_SESSION['userID']);
+                        unset($_SESSION['userID']);
                         header('Location: ' . URL . 'Login'); // redirect
                     } else {
                         //the passwords do not match

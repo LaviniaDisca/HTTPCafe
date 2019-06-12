@@ -61,6 +61,22 @@ class TableModel
             return true;
         return false;
     }
+
+    public function getDistribution($tableID)
+    {
+        $sql = "SELECT tables.id as 'table',username as 'user' FROM tables inner join table_users on table_id=tables.id inner join users on user_id = users.id where tables.id=".$tableID;
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return $query->fetchAll();
+    }
+
+    public function getCount()
+    {
+        $sql = "SELECT * FROM  tables";
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return $query->rowCount();
+    }
 }
 
 
