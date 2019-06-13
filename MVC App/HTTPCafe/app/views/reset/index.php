@@ -24,6 +24,7 @@
         <p>Confirm password: </p>
         <input type="password" name="confirmPassword" placeholder="Confirm password" minlength="6" required>
         <input type="submit" value="Reset password" class="button">
+        <a href="<?php echo URL ?>Login">Already have an account? Login!</a>
     </form>
 </div>
 </body>

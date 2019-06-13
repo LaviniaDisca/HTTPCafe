@@ -6,9 +6,6 @@ class Reset extends Controller
     {
         session_start();
         $this->showForbidden(static::class, $_SERVER['HTTP_REFERER']);
-        if (!isset($_SESSION['userID'])) {
-            $this->forbid();
-        }
         if (isset($_SESSION['email_err'])) {
             $data['email'] = $_SESSION['email_err'];
         } else {

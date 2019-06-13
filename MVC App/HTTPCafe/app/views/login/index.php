@@ -22,7 +22,8 @@
             <input type="password" name="password" placeholder="Enter password" minlength="6" required>
             <span class="help-block"><?php echo $data['pass']; ?></span>
         <input type="submit" value="Log In" class="button">
-        <a href="<?php echo URL ?>Register">Don't have an account? Sign up!</a>
+        <a href="<?php echo URL ?>Register">Don't have an account? Sign up!</a><br>
+        <a href="<?php echo URL ?>Reset">Forgot password?</a>
     </form>
 </div>
 </body>
